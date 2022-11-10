@@ -1,5 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 const CurrentSandwich = ()=> {
     const [sandwich, setSandwich] = useState({
@@ -14,7 +15,7 @@ const CurrentSandwich = ()=> {
         <ListGroup>
             {sandwich.ingredients.map((ing,index)=>{
                 return(
-                <ListGroup.Item key={index}>{ing}</ListGroup.Item>
+                <ListGroup.Item key={index}>{ing}<Button>Remove</Button></ListGroup.Item>
                 )
             })}
         </ListGroup>

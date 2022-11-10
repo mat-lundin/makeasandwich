@@ -1,4 +1,5 @@
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 
 const ingredientList = [{
     id: 0,
@@ -37,7 +38,7 @@ const Ingredients = ()=>{
         <ListGroup>
         {ingredientList.map((ing, index)=>{
             return(
-                <ListGroup.Item key={index}>{ing.name}</ListGroup.Item>
+                <ListGroup.Item key={index}>{ing.name}<Button>Add</Button></ListGroup.Item>
             )
         })}
         </ListGroup>
