@@ -1,2 +1,11 @@
-import Current from '../components/current_sandwich';
-import Ingredients from '../components/ingredients';
+import CurrentSandwich from '../components/CurrentSandwich';
+import Ingredients from '../components/Ingredients';
+
+
+function Home(){
+
+    return(
+        <CurrentSandwich />
+    )
+}
+export default Home

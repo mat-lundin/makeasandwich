@@ -1,3 +1,3 @@
-import Saved from '../components/saved';
+import Saved from '../components/Saved';
 
 export default Saved
