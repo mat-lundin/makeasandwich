@@ -9,8 +9,9 @@ const CurrentSandwich = ()=> {
         ingredients: ['bread','bacon','lettuce','tomato','bread'],
         starred: false
     })
+    // console.log(sandwich.name)
     return (
-        <>
+        <div>
         <h3>{sandwich.name}</h3>
         <ListGroup>
             {sandwich.ingredients.map((ing,index)=>{
@@ -19,7 +20,7 @@ const CurrentSandwich = ()=> {
                 )
             })}
         </ListGroup>
-        </>
+        </div>
     )
 }
 

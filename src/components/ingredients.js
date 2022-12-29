@@ -30,10 +30,13 @@ const ingredientList = [{
     id: 5,
     name: 'cheddar',
     type: 'cheese'
-}]
-const Ingredients = ()=>{
+}];
+
+const Ingredients = (sandwich,setSandwich)=>{
+
+
     return(
-        <>
+        <div className='ingredients'>
         <h3>Ingredients</h3>
         <ListGroup>
         {ingredientList.map((ing, index)=>{
@@ -42,7 +45,7 @@ const Ingredients = ()=>{
             )
         })}
         </ListGroup>
-        </>
+        </div>
     )
 }
 
