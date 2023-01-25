@@ -34,14 +34,7 @@ const ingredientList = [{
 }];
 
 const Ingredients = (props)=>{
-    // function onAdd(ingredient){
-    //     props.setSandwich(prevSandwich=>{
-    //         return {
-    //             prevSandwich,
-    //             ingredients: [...prevSandwich.ingredients, ingredient]
-    //         }
-    //     })
-    // }
+console.log('ingredients rendered')
 
     return(
         <div className='ingredients'>
@@ -49,7 +42,7 @@ const Ingredients = (props)=>{
         <ListGroup>
         {ingredientList.map((ing, index)=>{
             return(
-                <ListGroup.Item key={index}>{ing.name}<Button onClick={console.log('click')}>Add</Button></ListGroup.Item>
+                <ListGroup.Item key={index}>{ing.name}<Button onClick={()=>props.add(ing.name)}>Add</Button></ListGroup.Item>
             )
         })}
         </ListGroup>

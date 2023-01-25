@@ -1,6 +1,6 @@
 import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from '../components/Ingredients';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Home(){
     const [sandwich, setSandwich] = useState({
@@ -10,6 +10,15 @@ function Home(){
         starred: false
     })
 
+    function onAdd(ingredient){
+        console.log(ingredient)
+        setSandwich(prevSandwich=>{
+            return {
+                ...prevSandwich,
+                ingredients: [...prevSandwich.ingredients, ingredient]
+            }
+        })
+    }
 
     return(
         <main>
@@ -18,8 +27,7 @@ function Home(){
         />
         <Ingredients 
         sandwich={sandwich}
-        // setSandwich={setSandwich}
-        // onAdd={onAdd}
+        add={onAdd}
         />
         </main>
     )
