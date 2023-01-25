@@ -10,13 +10,6 @@ import Home from './pages/home';
 import Saved from './pages/saved';
 
 
-// const [sandwich, setSandwich] = useState({
-//     id: 0,
-//     name: '',
-//     ingredients: ['bread','bacon','lettuce','tomato','bread'],
-//     starred: false
-// })
-
 function App() {
   return (
     <main>

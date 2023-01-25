@@ -1,5 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 
 const ingredientList = [{
     id: 0,
@@ -32,8 +33,15 @@ const ingredientList = [{
     type: 'cheese'
 }];
 
-const Ingredients = (sandwich,setSandwich)=>{
-
+const Ingredients = (props)=>{
+    // function onAdd(ingredient){
+    //     props.setSandwich(prevSandwich=>{
+    //         return {
+    //             prevSandwich,
+    //             ingredients: [...prevSandwich.ingredients, ingredient]
+    //         }
+    //     })
+    // }
 
     return(
         <div className='ingredients'>
@@ -41,7 +49,7 @@ const Ingredients = (sandwich,setSandwich)=>{
         <ListGroup>
         {ingredientList.map((ing, index)=>{
             return(
-                <ListGroup.Item key={index}>{ing.name}<Button>Add</Button></ListGroup.Item>
+                <ListGroup.Item key={index}>{ing.name}<Button onClick={console.log('click')}>Add</Button></ListGroup.Item>
             )
         })}
         </ListGroup>
