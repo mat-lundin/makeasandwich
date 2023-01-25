@@ -1,0 +1,14 @@
+h3 {
+    padding-bottom: 2em;
+    justify-content: center;
+}
+
+main {
+    display: inline-flex;
+}
+
+.ingredients {
+    background-color: blue;
+    width: 40%;
+    place-content: right;
+}
