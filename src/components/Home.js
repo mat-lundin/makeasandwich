@@ -20,10 +20,23 @@ function Home(){
         })
     }
 
+    function onRemove(index){
+        console.log(index)
+        const newIng = sandwich.ingredients;
+        newIng.splice(index,1)
+        setSandwich(prevSandwich=>{
+            return {
+                ...prevSandwich,
+                ingredients: newIng
+            }
+        })
+    }
+
     return(
         <main>
         <CurrentSandwich 
         sandwich={sandwich}
+        remove={onRemove}
         />
         <Ingredients 
         sandwich={sandwich}
