@@ -1,9 +1,18 @@
+import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
 const Saved = () => {
-    const saved = JSON.parse(window.localStorage.getItem('saved'))
-    console.log(saved)
+    const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')))
+    
+    function remove(index){
+        const newSaved = saved;
+        newSaved.splice(index,1);
+        setSaved(newSaved)
+        window.localStorage.setItem('saved',JSON.stringify(saved))
+        
+    }
+
     return (
         <main>
             <Table striped bordered hover>
@@ -21,12 +30,13 @@ const Saved = () => {
                         <td>{item.name}</td>
                         <td>{item.ingredients}</td>
                         <td><Button>Load</Button></td>
-                        <td><Button>Remove</Button></td>
+                        <td><Button onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
 })}
                 </tbody>
 
             </Table>
+            <Button href='/'>Back</Button>
         </main>
     )
 }

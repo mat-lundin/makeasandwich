@@ -51,6 +51,7 @@ function Home(){
         add={onAdd}
         />
         <Button onClick={()=>onSave()}>Save</Button>
+        <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
 }
