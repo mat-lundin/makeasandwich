@@ -1,6 +1,7 @@
 import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from '../components/Ingredients';
 import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 
 function Home(){
     const [sandwich, setSandwich] = useState({
@@ -22,7 +23,7 @@ function Home(){
 
     function onRemove(index){
         console.log(index)
-        const newIng = sandwich.ingredients;
+        const newIng = [...sandwich.ingredients];
         newIng.splice(index,1)
         setSandwich(prevSandwich=>{
             return {
@@ -30,6 +31,13 @@ function Home(){
                 ingredients: newIng
             }
         })
+    }
+
+    function onSave(){
+        const oldSaved = JSON.parse(window.localStorage.getItem('saved'));
+        const saved = oldSaved || [];
+        saved.push(sandwich);
+        window.localStorage.setItem("saved",JSON.stringify(saved));
     }
 
     return(
@@ -42,6 +50,8 @@ function Home(){
         sandwich={sandwich}
         add={onAdd}
         />
+        <Button onClick={()=>onSave()}>Save</Button>
+        <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
 }
