@@ -6,10 +6,10 @@ const Saved = () => {
     const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')))
     
     function remove(index){
-        const newSaved = saved;
+        const newSaved = [...saved];
         newSaved.splice(index,1);
-        setSaved(newSaved)
-        window.localStorage.setItem('saved',JSON.stringify(saved))
+        setSaved(newSaved);
+        window.localStorage.setItem('saved',JSON.stringify(saved));
         
     }
 

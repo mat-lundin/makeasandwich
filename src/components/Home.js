@@ -23,7 +23,7 @@ function Home(){
 
     function onRemove(index){
         console.log(index)
-        const newIng = sandwich.ingredients;
+        const newIng = [...sandwich.ingredients];
         newIng.splice(index,1)
         setSandwich(prevSandwich=>{
             return {
