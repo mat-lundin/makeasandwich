@@ -6,11 +6,20 @@ const Saved = () => {
     const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')))
     
     function remove(index){
+        console.log(index)
         const newSaved = [...saved];
         newSaved.splice(index,1);
-        setSaved(newSaved);
+        // console.log(newSaved)
+        setSaved(()=>{
+            return newSaved
+        });
+        console.log(saved)
         window.localStorage.setItem('saved',JSON.stringify(saved));
         
+    }
+
+    function listIngredients(ingredients){
+
     }
 
     return (
@@ -20,6 +29,7 @@ const Saved = () => {
                     <tr>
                         <th>Name</th>
                         <th>Ingredients</th>
+                        <th>Favorite</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -28,7 +38,8 @@ const Saved = () => {
                 {saved.map((item,index) => {
                     return (<tr key={index}>
                         <td>{item.name}</td>
-                        <td>{item.ingredients}</td>
+                        <td>{item.ingredients.toString()}</td>
+                        <td>{item.starred}</td>
                         <td><Button>Load</Button></td>
                         <td><Button onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
