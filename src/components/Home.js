@@ -33,6 +33,17 @@ function Home(){
         })
     }
 
+    function updateName(){
+        let name = document.getElementById('name');
+                name = name.value
+        setSandwich(prevSandwich=>{
+            return {
+                ...prevSandwich,
+                name: name
+            }
+        })
+    }
+
     function onSave(){
         const oldSaved = JSON.parse(window.localStorage.getItem('saved'));
         const saved = oldSaved || [];
@@ -45,12 +56,14 @@ function Home(){
         <CurrentSandwich 
         sandwich={sandwich}
         remove={onRemove}
+        updateName={updateName}
+        save={onSave}
         />
         <Ingredients 
         sandwich={sandwich}
         add={onAdd}
         />
-        <Button onClick={()=>onSave()}>Save</Button>
+        
         <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
