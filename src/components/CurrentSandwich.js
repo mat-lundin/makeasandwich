@@ -7,11 +7,11 @@ import { getValue } from '@testing-library/user-event/dist/utils';
 const CurrentSandwich = (props)=> {
     return (
         <div>
-        {/* <h3>{props.sandwich.name}</h3> */}
-        <Form onSubmit={()=>props.updateName()}>
-            <Form.Control type="text" id="name" defaultValue={props.sandwich.name}></Form.Control>
-            <Button variant="primary" type="submit" onClick={()=>{
-                }}>Submit</Button>
+        <Form onSubmit={(event)=>{
+            event.preventDefault();
+            console.log(event.target.value)}}>
+            <Form.Control type="text" id="name" defaultValue={props.sandwich.name} onChange={(e)=> e.target.value}></Form.Control>
+            <Button variant="primary" type="submit">Submit</Button>
         </Form>
         <ListGroup>
             {props.sandwich.ingredients.map((ing,index)=>{

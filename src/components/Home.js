@@ -33,9 +33,9 @@ function Home(){
         })
     }
 
-    function updateName(){
-        let name = document.getElementById('name');
-                name = name.value
+    function updateName(name){
+        // let name = document.getElementById('name');
+        //         name = name.value
         setSandwich(prevSandwich=>{
             return {
                 ...prevSandwich,
