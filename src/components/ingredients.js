@@ -2,6 +2,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 
+// all ingredient options
 const ingredientList = [{
     id: 0,
     name: 'white bread',

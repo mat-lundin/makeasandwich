@@ -11,6 +11,7 @@ function Home(){
         starred: false
     })
 
+    // add ingredient to sandwich
     function onAdd(ingredient){
         console.log(ingredient)
         setSandwich(prevSandwich=>{
@@ -21,6 +22,7 @@ function Home(){
         })
     }
 
+    // remove ingredient from sandwich
     function onRemove(index){
         console.log(index)
         const newIng = [...sandwich.ingredients];
@@ -33,6 +35,7 @@ function Home(){
         })
     }
 
+    // update the name of the current sandwich
     function updateName(name){
         // let name = document.getElementById('name');
         //         name = name.value
@@ -44,6 +47,7 @@ function Home(){
         })
     }
 
+    // add sandwich to saved list
     function onSave(){
         const oldSaved = JSON.parse(window.localStorage.getItem('saved'));
         const saved = oldSaved || [];

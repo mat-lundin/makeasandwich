@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 const Saved = () => {
     const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')))
     
+    // remove sandwich from saved
     function remove(index){
         console.log(index)
         const newSaved = [...saved];
@@ -18,6 +19,7 @@ const Saved = () => {
         
     }
 
+    // display ingredients in a nice way
     function listIngredients(ingredients){
 
     }
