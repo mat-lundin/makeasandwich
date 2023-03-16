@@ -4,12 +4,55 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 
 function Home(){
+    const breadImg = process.env.PUBLIC_URL + "/ingredients/bread.png";
+const condimentImg = process.env.PUBLIC_URL + "/ingredients/condiment.png";
+const vegImg = process.env.PUBLIC_URL + "/ingredients/lettuce.png";
+const meatImg = process.env.PUBLIC_URL + "/ingredients/meat.png";
+const cheeseImg = process.env.PUBLIC_URL + "/ingredients/cheese.png";
     const [sandwich, setSandwich] = useState({
         id: 0,
         name: 'My Sandwich',
         ingredients: ['bread','bacon','lettuce','tomato','bread'],
         starred: false
     })
+
+// all ingredient options
+const [ingredientList,setIngredientList] = useState( [{
+    id: 0,
+    name: 'white bread',
+    type: 'bread',
+    icon: breadImg
+},
+{
+    id: 1,
+    name: 'lettuce',
+    type: 'veg',
+    icon: vegImg
+},
+{
+    id: 2,
+    name: 'tomato',
+    type: 'veg',
+    icon: vegImg
+},
+{
+    id: 3,
+    name: 'bacon',
+    type: 'meat',
+    icon: meatImg
+},
+{
+    id: 4,
+    name: 'mustard',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 5,
+    name: 'cheddar',
+    type: 'cheese',
+    icon: cheeseImg
+}]);
 
     // add ingredient to sandwich
     function onAdd(ingredient){
@@ -64,6 +107,7 @@ function Home(){
         save={onSave}
         />
         <Ingredients 
+        ingredients={ingredientList}
         sandwich={sandwich}
         add={onAdd}
         />
