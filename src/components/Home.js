@@ -63,7 +63,7 @@ const [sandwich, setSandwich] = useState({
         setSandwich(prevSandwich=>{
             return {
                 ...prevSandwich,
-                ingredients: [...prevSandwich.ingredients, ingredient]
+                ingredients: [...prevSandwich.ingredients, ingredient.id]
             }
         })
     };

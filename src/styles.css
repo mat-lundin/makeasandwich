@@ -8,7 +8,7 @@ main {
 }
 
 .ingredients {
-    background-color: blue;
+    /* background-color: blue; */
     width: 50%;
     place-content: right;
 }
