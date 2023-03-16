@@ -16,7 +16,7 @@ const CurrentSandwich = (props)=> {
         <ListGroup>
             {props.sandwich.ingredients.map((ing,index)=>{
                 return(
-                <ListGroup.Item key={index}>{ing}<Button onClick={()=>props.remove(index)}>Remove</Button></ListGroup.Item>
+                <ListGroup.Item key={index}>{ing.name}<img className='ingIcon' src={ing.icon}></img><Button onClick={()=>props.remove(index)}>Remove</Button></ListGroup.Item>
                 )
             })}
         </ListGroup>

@@ -11,7 +11,7 @@ console.log('ingredients rendered')
         <ListGroup>
         {props.ingredients.map((ing, index)=>{
             return(
-                <ListGroup.Item key={index}>{ing.name}<img className='ingIcon' src={ing.icon}></img><Button onClick={()=>props.add(ing.name)}>Add</Button></ListGroup.Item>
+                <ListGroup.Item key={index}>{ing.name}<img className='ingIcon' src={ing.icon}></img><Button onClick={()=>props.add(ing)}>Add</Button></ListGroup.Item>
             )
         })}
         </ListGroup>
