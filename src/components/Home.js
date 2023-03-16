@@ -82,6 +82,17 @@ const [sandwich, setSandwich] = useState({
         })
     };
 
+    // display ingredient name on current sandwich
+    function displayIngName(id){
+       return ingredientList.find(obj=> obj.id === id).name;
+    }
+
+    // display ingredient icon on current sandwich
+    function displayIngIcon(id){
+        return ingredientList.find(obj=> obj.id === id).icon;
+
+    }
+
     // update the name of the current sandwich
     function updateName(name){
         // let name = document.getElementById('name');
@@ -106,6 +117,8 @@ const [sandwich, setSandwich] = useState({
         <main>
         <CurrentSandwich 
         sandwich={sandwich}
+        displayIngName={displayIngName}
+        displayIngIcon={displayIngIcon}
         remove={onRemove}
         updateName={updateName}
         save={onSave}
