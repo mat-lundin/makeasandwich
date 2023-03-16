@@ -1,5 +1,6 @@
 import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from './Ingredients';
+import Saved from './Saved';
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 
@@ -114,7 +115,9 @@ const [sandwich, setSandwich] = useState({
         sandwich={sandwich}
         add={onAdd}
         />
-        
+        <Saved
+        ingredients={ingredientList}
+        />
         <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
