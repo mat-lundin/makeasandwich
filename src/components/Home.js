@@ -1,5 +1,5 @@
 import CurrentSandwich from '../components/CurrentSandwich';
-import Ingredients from '../components/Ingredients';
+import Ingredients from './Ingredients';
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 
@@ -9,12 +9,7 @@ const condimentImg = process.env.PUBLIC_URL + "/ingredients/condiment.png";
 const vegImg = process.env.PUBLIC_URL + "/ingredients/lettuce.png";
 const meatImg = process.env.PUBLIC_URL + "/ingredients/meat.png";
 const cheeseImg = process.env.PUBLIC_URL + "/ingredients/cheese.png";
-    const [sandwich, setSandwich] = useState({
-        id: 0,
-        name: 'My Sandwich',
-        ingredients: ['bread','bacon','lettuce','tomato','bread'],
-        starred: false
-    })
+
 
 // all ingredient options
 const [ingredientList,setIngredientList] = useState( [{
@@ -54,6 +49,14 @@ const [ingredientList,setIngredientList] = useState( [{
     icon: cheeseImg
 }]);
 
+// set current sandwich
+const [sandwich, setSandwich] = useState({
+    id: 0,
+    name: 'My Sandwich',
+    ingredients: [],
+    starred: false
+});
+
     // add ingredient to sandwich
     function onAdd(ingredient){
         console.log(ingredient)
@@ -63,7 +66,7 @@ const [ingredientList,setIngredientList] = useState( [{
                 ingredients: [...prevSandwich.ingredients, ingredient]
             }
         })
-    }
+    };
 
     // remove ingredient from sandwich
     function onRemove(index){
@@ -76,7 +79,7 @@ const [ingredientList,setIngredientList] = useState( [{
                 ingredients: newIng
             }
         })
-    }
+    };
 
     // update the name of the current sandwich
     function updateName(name){
@@ -88,7 +91,7 @@ const [ingredientList,setIngredientList] = useState( [{
                 name: name
             }
         })
-    }
+    };
 
     // add sandwich to saved list
     function onSave(){
@@ -96,7 +99,7 @@ const [ingredientList,setIngredientList] = useState( [{
         const saved = oldSaved || [];
         saved.push(sandwich);
         window.localStorage.setItem("saved",JSON.stringify(saved));
-    }
+    };
 
     return(
         <main>
@@ -115,5 +118,5 @@ const [ingredientList,setIngredientList] = useState( [{
         <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
-}
+};
 export default Home
