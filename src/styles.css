@@ -9,6 +9,12 @@ main {
 
 .ingredients {
     background-color: blue;
-    width: 40%;
+    width: 50%;
     place-content: right;
+}
+
+.ingIcon {
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
