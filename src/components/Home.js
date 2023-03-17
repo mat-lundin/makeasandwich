@@ -110,7 +110,7 @@ const [sandwich, setSandwich] = useState({
     id: 0,
     name: 'My Sandwich',
     ingredients: [],
-    starred: false
+    starred: true
 });
 
     // add ingredient to sandwich

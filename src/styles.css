@@ -26,3 +26,7 @@ main {
 .savedTable {
     display: inline;
 }
+
+.starImg {
+    height: 10vh;
+}
