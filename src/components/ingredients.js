@@ -7,7 +7,7 @@ console.log('ingredients rendered')
 
     return(
         <div className='ingredients'>
-        <h3>Ingredients</h3>
+        <h2>Ingredients</h2>
         <ListGroup>
         {props.ingredients.map((ing, index)=>{
             return(

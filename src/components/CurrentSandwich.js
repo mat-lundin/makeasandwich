@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form';
 
 const CurrentSandwich = (props)=> {
     return (
-        <div>
+        <div className='curSand'>
+            <h2>Current Sandwich</h2>
         <Form onSubmit={(event)=>{
             event.preventDefault();
             console.log(event.target.value)}}>

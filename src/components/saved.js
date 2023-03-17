@@ -25,7 +25,8 @@ const Saved = (props) => {
     }
 
     return (
-        <main>
+        <main className='saved'>
+            <h2>Saved Sandwiches</h2>
             <Table striped bordered hover className='savedTable'>
                 <thead>
                     <tr>

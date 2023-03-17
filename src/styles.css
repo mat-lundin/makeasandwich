@@ -19,6 +19,15 @@ main {
     padding-right: 1em;
 }
 
+.curSand {
+    width: 36em;
+    display: inline;
+}
+
+.saved {
+    display: block;
+}
+
 .savedIng {
     display: inline;
 }
