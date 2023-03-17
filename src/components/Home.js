@@ -84,11 +84,13 @@ const [sandwich, setSandwich] = useState({
 
     // display ingredient name on current sandwich
     function displayIngName(id){
+        
        return ingredientList.find(obj=> obj.id === id).name;
     }
 
     // display ingredient icon on current sandwich
     function displayIngIcon(id){
+        console.log(`ingIcon id = ${id}`)
         return ingredientList.find(obj=> obj.id === id).icon;
 
     }
@@ -129,7 +131,8 @@ const [sandwich, setSandwich] = useState({
         add={onAdd}
         />
         <Saved
-        ingredients={ingredientList}
+        displayIngName={displayIngName}
+        displayIngIcon={displayIngIcon}
         />
         <Button href="/saved">Saved Sandwiches</Button>
         </main>

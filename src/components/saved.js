@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-const Saved = () => {
+const Saved = (props) => {
     const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')))
     
     // remove sandwich from saved
@@ -40,7 +40,7 @@ const Saved = () => {
                 {saved.map((item,index) => {
                     return (<tr key={index}>
                         <td>{item.name}</td>
-                        <td>{item.ingredients.toString()}</td>
+                        <td>{item.ingredients.map((id)=>{return <>{props.displayIngName(id)}<br></br> <img className='ingIcon' src={props.displayIngIcon(id)}></img></>})}</td>
                         <td>{item.starred}</td>
                         <td><Button>Load</Button></td>
                         <td><Button onClick={()=>remove(index)}>Remove</Button></td>
