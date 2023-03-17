@@ -43,8 +43,8 @@ const Saved = (props) => {
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
                         <td>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
-                        <td><Button>Load</Button></td>
-                        <td><Button onClick={()=>remove(index)}>Remove</Button></td>
+                        <td><Button variant='info'>Load</Button></td>
+                        <td><Button variant='danger' onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
 })}
                 </tbody>

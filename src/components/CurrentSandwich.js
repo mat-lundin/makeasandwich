@@ -20,8 +20,8 @@ const CurrentSandwich = (props)=> {
                 )
             })}
         </ListGroup>
-        <Button variant="success" onClick={()=>props.save()}>Save</Button>
-        <Button variant="danger">Clear</Button>{' '}
+        <Button variant="success" size='lg' onClick={()=>props.save()}>Save</Button>
+        <Button variant="danger" size='sm'>Clear</Button>{' '}
         </div>
     )
 }
