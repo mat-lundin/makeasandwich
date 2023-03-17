@@ -49,7 +49,61 @@ const [ingredientList,setIngredientList] = useState( [{
     name: 'cheddar',
     type: 'cheese',
     icon: cheeseImg
-}]);
+},
+{
+    id: 5,
+    name: 'ketchup',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 6,
+    name: 'mayonnaise',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 7,
+    name: 'olive oil',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 8,
+    name: 'Italian dressing',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 9,
+    name: 'pickles',
+    type: 'veg',
+    icon: vegImg
+},
+{
+    id: 10,
+    name: 'brie',
+    type: 'cheese',
+    icon: cheeseImg
+},
+{
+    id: 11,
+    name: 'american cheese',
+    type: 'cheese',
+    icon: cheeseImg
+},
+{
+    id: 12,
+    name: 'balsamic vinegarette',
+    type: 'condiment',
+    icon: condimentImg
+},
+{
+    id: 13,
+    name: 'apple',
+    type: 'veg',
+    icon: vegImg
+},]);
 
 // set current sandwich
 const [sandwich, setSandwich] = useState({

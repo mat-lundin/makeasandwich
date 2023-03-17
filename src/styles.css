@@ -18,3 +18,7 @@ main {
     padding-left: 1em;
     padding-right: 1em;
 }
+
+.savedIng {
+    display: inline;
+}

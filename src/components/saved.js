@@ -40,7 +40,7 @@ const Saved = (props) => {
                 {saved.map((item,index) => {
                     return (<tr key={index}>
                         <td>{item.name}</td>
-                        <td>{item.ingredients.map((id)=>{return <>{props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></>})}</td>
+                        <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
                         <td>{item.starred}</td>
                         <td><Button>Load</Button></td>
                         <td><Button onClick={()=>remove(index)}>Remove</Button></td>
