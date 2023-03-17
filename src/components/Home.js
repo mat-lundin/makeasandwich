@@ -135,7 +135,6 @@ const [sandwich, setSandwich] = useState({
         displayIngName={displayIngName}
         displayIngIcon={displayIngIcon}
         />
-        <Button href="/saved">Saved Sandwiches</Button>
         </main>
     )
 };

@@ -7,10 +7,10 @@ const Saved = (props) => {
     
     // remove sandwich from saved
     function remove(index){
-        console.log(index)
+        console.log(`remove index = ${index}`)
         const newSaved = [...saved];
         newSaved.splice(index,1);
-        // console.log(newSaved)
+        console.log(`newSaved = ${newSaved}`)
         setSaved(()=>{
             return newSaved
         });
@@ -40,7 +40,7 @@ const Saved = (props) => {
                 {saved.map((item,index) => {
                     return (<tr key={index}>
                         <td>{item.name}</td>
-                        <td>{item.ingredients.map((id)=>{return <>{props.displayIngName(id)}<br></br> <img className='ingIcon' src={props.displayIngIcon(id)}></img></>})}</td>
+                        <td>{item.ingredients.map((id)=>{return <>{props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></>})}</td>
                         <td>{item.starred}</td>
                         <td><Button>Load</Button></td>
                         <td><Button onClick={()=>remove(index)}>Remove</Button></td>
@@ -49,7 +49,6 @@ const Saved = (props) => {
                 </tbody>
 
             </Table>
-            <Button href='/'>Back</Button>
         </main>
     )
 }
