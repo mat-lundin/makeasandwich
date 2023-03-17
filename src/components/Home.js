@@ -5,11 +5,12 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 
 function Home(){
-    const breadImg = process.env.PUBLIC_URL + "/ingredients/bread.png";
-const condimentImg = process.env.PUBLIC_URL + "/ingredients/condiment.png";
-const vegImg = process.env.PUBLIC_URL + "/ingredients/lettuce.png";
-const meatImg = process.env.PUBLIC_URL + "/ingredients/meat.png";
-const cheeseImg = process.env.PUBLIC_URL + "/ingredients/cheese.png";
+    const breadImg = process.env.PUBLIC_URL + "images/ingredients/bread.png";
+const condimentImg = process.env.PUBLIC_URL + "images/ingredients/condiment.png";
+const vegImg = process.env.PUBLIC_URL + "images/ingredients/lettuce.png";
+const meatImg = process.env.PUBLIC_URL + "images/ingredients/meat.png";
+const cheeseImg = process.env.PUBLIC_URL + "images/ingredients/cheese.png";
+const tomatoImg = process.env.PUBLIC_URL + "images/ingredients/tomato.png"
 
 
 // all ingredient options
@@ -29,7 +30,7 @@ const [ingredientList,setIngredientList] = useState( [{
     id: 2,
     name: 'tomato',
     type: 'veg',
-    icon: vegImg
+    icon: tomatoImg
 },
 {
     id: 3,
