@@ -26,7 +26,7 @@ const Saved = (props) => {
 
     return (
         <main>
-            <Table striped bordered hover>
+            <Table striped bordered hover className='savedTable'>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -38,7 +38,7 @@ const Saved = (props) => {
                 </thead>
                 <tbody>
                 {saved.map((item,index) => {
-                    return (<tr key={index}>
+                    return (<tr  key={index}>
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
                         <td>{item.starred}</td>
