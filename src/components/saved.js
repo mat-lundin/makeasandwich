@@ -12,9 +12,13 @@ const Saved = (props) => {
         newSaved.splice(index,1);
         console.log(`newSaved = ${newSaved}`)
         setSaved(()=>{
+            return []
+        });
+        setSaved(()=>{
             return newSaved
         });
         console.log(saved)
+        window.localStorage.removeItem('saved')
         window.localStorage.setItem('saved',JSON.stringify(saved));
         
     }
@@ -23,6 +27,26 @@ const Saved = (props) => {
     function addStar(index){
         const updatedSandwich = saved[index];
         updatedSandwich.starred = true;
+        const newSaved = [...saved];
+        newSaved.splice(index,1);
+        newSaved.splice(index,0,updatedSandwich);
+        setSaved(()=>{
+            return newSaved;
+        });
+        window.localStorage.setItem('saved',JSON.stringify(saved));
+    }
+
+    // unfavorite a saved sandwich
+    function removeStar(index){
+        const updatedSandwich = saved[index];
+        updatedSandwich.starred = false;
+        const newSaved = [...saved];
+        newSaved.splice(index,1);
+        newSaved.splice(index,0,updatedSandwich);
+        setSaved(()=>{
+            return newSaved;
+        });
+        window.localStorage.setItem('saved',JSON.stringify(saved));
     }
 
     return (
@@ -43,7 +67,7 @@ const Saved = (props) => {
                     return (<tr  key={index}>
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
-                        <td>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
+                        <td onClick={()=>addStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
                         <td><Button variant='info'>Load</Button></td>
                         <td><Button variant='danger' onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
