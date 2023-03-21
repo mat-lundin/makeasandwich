@@ -23,23 +23,10 @@ const Saved = (props) => {
         
     }
 
-    // favorite a saved sandwich
-    function addStar(index){
+    // toggle whether the sandwich is starred
+    function toggleStar(index){
         const updatedSandwich = saved[index];
-        updatedSandwich.starred = true;
-        const newSaved = [...saved];
-        newSaved.splice(index,1);
-        newSaved.splice(index,0,updatedSandwich);
-        setSaved(()=>{
-            return newSaved;
-        });
-        window.localStorage.setItem('saved',JSON.stringify(saved));
-    }
-
-    // unfavorite a saved sandwich
-    function removeStar(index){
-        const updatedSandwich = saved[index];
-        updatedSandwich.starred = false;
+        updatedSandwich.starred = !updatedSandwich.starred;
         const newSaved = [...saved];
         newSaved.splice(index,1);
         newSaved.splice(index,0,updatedSandwich);
@@ -67,7 +54,7 @@ const Saved = (props) => {
                     return (<tr  key={index}>
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
-                        <td onClick={()=>addStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
+                        <td onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
                         <td><Button variant='info'>Load</Button></td>
                         <td><Button variant='danger' onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
