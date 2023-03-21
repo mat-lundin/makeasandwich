@@ -2,10 +2,9 @@ import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from './Ingredients';
 import Saved from './Saved';
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 
 function Home(){
-    const breadImg = process.env.PUBLIC_URL + "images/ingredients/bread.png";
+const breadImg = process.env.PUBLIC_URL + "images/ingredients/bread.png";
 const condimentImg = process.env.PUBLIC_URL + "images/ingredients/condiment.png";
 const vegImg = process.env.PUBLIC_URL + "images/ingredients/lettuce.png";
 const meatImg = process.env.PUBLIC_URL + "images/ingredients/meat.png";
@@ -152,9 +151,7 @@ const [sandwich, setSandwich] = useState({
 
     // update the name of the current sandwich
     function updateName(name){
-        // let name = document.getElementById('name');
-        //         name = name.value
-        setSandwich(prevSandwich=>{
+        setSandwich((prevSandwich)=>{
             return {
                 ...prevSandwich,
                 name: name

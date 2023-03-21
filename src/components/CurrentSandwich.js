@@ -1,5 +1,4 @@
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -12,7 +11,7 @@ const CurrentSandwich = (props)=> {
         <Form onSubmit={(event)=>{
             event.preventDefault();
             console.log(event.target.value)}}>
-            <Form.Control type="text" id="name" defaultValue={props.sandwich.name} onChange={(e)=> e.target.value}></Form.Control>
+            <Form.Control type="text" id="name" defaultValue={props.sandwich.name} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
             <Button variant="primary" type="submit">Submit Name</Button>
         </Form>
         <ListGroup>
