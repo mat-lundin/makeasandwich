@@ -8,15 +8,17 @@ const Saved = (props) => {
     // remove sandwich from saved
     function remove(item){
         console.log(`itemId = ${item.id}`)
-
+        console.log(`saved length = ${saved.length}`)
         if (saved.length === 1){
-            setSaved(
-                saved.length = 0
-            )} else {
+            const newSaved = [...saved]
+            newSaved.length=0
+            setSaved(()=>{return newSaved})} 
+            else {
                 setSaved(
                     saved.filter(s=>
                         s.id !== item.id
                 ))
+                console.log(``)
             }
             console.log(`saved after filter = ${saved[0].id}`)
             window.localStorage.setItem('saved',JSON.stringify(saved))

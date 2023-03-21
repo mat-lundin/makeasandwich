@@ -1,9 +1,14 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react';
 
 const CurrentSandwich = (props)=> {
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <div className='curSand'>
             <h2>Current Sandwich</h2>
@@ -12,6 +17,17 @@ const CurrentSandwich = (props)=> {
             console.log(event.target.value)}}>
             <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Oops!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Add some ingredients in order to save your sandwich!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
         <ListGroup>
             {props.sandwich.ingredients.map((ing,index)=>{
                 return(
@@ -19,7 +35,7 @@ const CurrentSandwich = (props)=> {
                 )
             })}
         </ListGroup>
-        <Button variant="success" size='lg' onClick={()=>props.save()}>Save</Button>
+        <Button variant="success" size='lg' onClick={props.sandwich.ingredients.length<1? handleShow : props.save}>Save</Button>
         <Button variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}
         </div>
     )
