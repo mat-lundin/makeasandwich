@@ -2,6 +2,7 @@ import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from './Ingredients';
 import Saved from './Saved';
 import React, { useState, useEffect } from 'react';
+import uniqid from 'uniqid';
 
 function Home(){
 const breadImg = process.env.PUBLIC_URL + "images/ingredients/bread.png";
@@ -106,7 +107,7 @@ const [ingredientList,setIngredientList] = useState( [{
 
 // set current sandwich
 const [sandwich, setSandwich] = useState({
-    id: 0,
+    id: uniqid(),
     name: 'New Sandwich',
     ingredients: [],
     starred: false
