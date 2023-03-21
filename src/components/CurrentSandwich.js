@@ -11,8 +11,7 @@ const CurrentSandwich = (props)=> {
         <Form onSubmit={(event)=>{
             event.preventDefault();
             console.log(event.target.value)}}>
-            <Form.Control type="text" id="name" defaultValue={props.sandwich.name} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
-            <Button variant="primary" type="submit">Submit Name</Button>
+            <Form.Control type="text" id="name" value={props.sandwich.name} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
         <ListGroup>
             {props.sandwich.ingredients.map((ing,index)=>{
@@ -22,7 +21,7 @@ const CurrentSandwich = (props)=> {
             })}
         </ListGroup>
         <Button variant="success" size='lg' onClick={()=>props.save()}>Save</Button>
-        <Button variant="danger" size='sm' onClick={()=>props.clearIng()}>Clear</Button>{' '}
+        <Button variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}
         </div>
     )
 }
