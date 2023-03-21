@@ -36,6 +36,13 @@ const Saved = (props) => {
         window.localStorage.setItem('saved',JSON.stringify(saved));
     }
 
+    // load saved sandwich to current sandwich
+    function loadSandwich(item){
+        props.setSandwich(()=> {
+            return item
+        });
+    }
+
     return (
         <main className='saved'>
             <h2>Saved Sandwiches</h2>
@@ -55,7 +62,7 @@ const Saved = (props) => {
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
                         <td className='starred' onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
-                        <td><Button variant='info'>Load</Button></td>
+                        <td><Button variant='info' onClick={()=>loadSandwich(item)}>Load</Button></td>
                         <td><Button variant='danger' onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)
 })}

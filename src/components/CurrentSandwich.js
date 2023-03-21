@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const CurrentSandwich = (props)=> {
+
+
     return (
         <div className='curSand'>
             <h2>Current Sandwich</h2>
@@ -21,7 +23,7 @@ const CurrentSandwich = (props)=> {
             })}
         </ListGroup>
         <Button variant="success" size='lg' onClick={()=>props.save()}>Save</Button>
-        <Button variant="danger" size='sm'>Clear</Button>{' '}
+        <Button variant="danger" size='sm' onClick={()=>props.clearIng()}>Clear</Button>{' '}
         </div>
     )
 }

@@ -168,17 +168,23 @@ const [sandwich, setSandwich] = useState({
         const saved = oldSaved || [];
         saved.push(sandwich);
         window.localStorage.setItem("saved",JSON.stringify(saved));
-        setSandwich(()=> {
-            const newSand = sandwich;
-            newSand.ingredients = [];
-            return newSand
-        })
+        clearIng();
     };
+
+        // clear ingredients from current sandwich
+        function clearIng(){
+            setSandwich((prevSandwich)=> {
+                return {...prevSandwich,
+                ingredients: []};
+            })
+        }
 
     return(
         <main>
         <CurrentSandwich 
         sandwich={sandwich}
+        setSandwich={setSandwich}
+        clearIng={clearIng}
         displayIngName={displayIngName}
         displayIngIcon={displayIngIcon}
         remove={onRemove}
@@ -193,6 +199,8 @@ const [sandwich, setSandwich] = useState({
         <Saved
         displayIngName={displayIngName}
         displayIngIcon={displayIngIcon}
+        currentSandwich={sandwich}
+        setSandwich={setSandwich}
         />
         </main>
     )
