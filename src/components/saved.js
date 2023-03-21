@@ -54,7 +54,7 @@ const Saved = (props) => {
                     return (<tr  key={index}>
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)}></img></div>)})}</td>
-                        <td onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
+                        <td className='starred' onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' src={process.env.PUBLIC_URL+'./images/ingredients/star.png'}></img>}</td>
                         <td><Button variant='info'>Load</Button></td>
                         <td><Button variant='danger' onClick={()=>remove(index)}>Remove</Button></td>
                     </tr>)

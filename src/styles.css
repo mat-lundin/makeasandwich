@@ -39,3 +39,9 @@ main {
 .starImg {
     height: 10vh;
 }
+
+/* media queries */
+td.starred:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}

@@ -11,7 +11,7 @@ const CurrentSandwich = (props)=> {
             event.preventDefault();
             console.log(event.target.value)}}>
             <Form.Control type="text" id="name" defaultValue={props.sandwich.name} onChange={(e)=> e.target.value}></Form.Control>
-            <Button variant="primary" type="submit">Submit</Button>
+            <Button variant="primary" type="submit">Submit Name</Button>
         </Form>
         <ListGroup>
             {props.sandwich.ingredients.map((ing,index)=>{

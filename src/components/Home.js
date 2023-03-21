@@ -168,6 +168,11 @@ const [sandwich, setSandwich] = useState({
         const saved = oldSaved || [];
         saved.push(sandwich);
         window.localStorage.setItem("saved",JSON.stringify(saved));
+        setSandwich(()=> {
+            const newSand = sandwich;
+            newSand.ingredients = [];
+            return newSand
+        })
     };
 
     return(
