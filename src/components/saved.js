@@ -19,9 +19,10 @@ const Saved = (props) => {
         
     }
 
-    // display ingredients in a nice way
-    function listIngredients(ingredients){
-
+    // favorite a saved sandwich
+    function addStar(index){
+        const updatedSandwich = saved[index];
+        updatedSandwich.starred = true;
     }
 
     return (
