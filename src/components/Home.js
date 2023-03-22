@@ -183,9 +183,9 @@ function removeFromSaved(item){
 
     // add sandwich to saved list
     function onSave(){
-        setSaved((prevSaved)=>{
-            return [...prevSaved].push(sandwich)
-        })
+        setSaved(
+            [...saved].concat(sandwich)
+        )
         window.localStorage.setItem("saved",JSON.stringify(saved));
         clearCurrent();
     };
