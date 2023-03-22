@@ -18,7 +18,7 @@ function updateIngSearch(val){
     return(
         <div className='ingredients'>
         <h2>Ingredients</h2>
-        <Form.Control type="text" id="name" placeholder='Search' onFocus={(e)=>e.target.select()} onChange={(e)=> updateIngSearch(e.target.value)}></Form.Control>
+        <Form.Control type="text" id="name" placeholder='Search' onFocus={(e)=>e.target.select()} autoComplete={'off'} onChange={(e)=> updateIngSearch(e.target.value)}></Form.Control>
         <ListGroup>
         {props.ingredients.map((ing, index)=>{
             if (ing.name.toLowerCase().includes(ingSearch) || ing.type.toLowerCase().includes(ingSearch))
