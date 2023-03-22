@@ -103,7 +103,13 @@ const [ingredientList,setIngredientList] = useState( [{
     name: 'apple',
     type: 'veg',
     icon: vegImg
-},]);
+},
+{
+    id:14,
+    name: 'pumpernickel',
+    type: 'bread',
+    icon: breadImg
+}]);
 
 // set current sandwich
 const [sandwich, setSandwich] = useState({
