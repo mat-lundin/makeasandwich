@@ -145,7 +145,6 @@ const [sandwich, setSandwich] = useState({
 
     // display ingredient icon on current sandwich
     function displayIngIcon(id){
-        console.log(`ingIcon id = ${id}`)
         return ingredientList.find(obj=> obj.id === id).icon;
 
     }
