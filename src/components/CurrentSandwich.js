@@ -14,8 +14,8 @@ const CurrentSandwich = (props)=> {
             <h2>Current Sandwich</h2>
         <Form onSubmit={(event)=>{
             event.preventDefault();
-            console.log(event.target.value)}}>
-            <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onContextMenu={(e)=> e.preventDefault()} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
+          }}>
+            <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onContextMenu={(e)=> e.preventDefault()} autoComplete={'off'} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

@@ -4,16 +4,14 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 
 const Ingredients = (props)=>{
-console.log('ingredients rendered')
 
 // state of ingredient search term
-const [ingSearch, setIngSearch] = useState('')
+const [ingSearch, setIngSearch] = useState('');
 
 // update search state
 function updateIngSearch(val){
     setIngSearch(val);
-    console.log(`ingSearch = ${ingSearch}`)
-}
+};
 
     return(
         <div className='ingredients'>

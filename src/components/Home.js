@@ -124,8 +124,6 @@ const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved
     
 // remove sandwich from saved
 function removeFromSaved(item){
-    console.log(`itemId = ${item.id}`)
-    console.log(`saved length = ${saved.length}`)
     if (saved.length === 1){
         const newSaved = [...saved]
         newSaved.length=0
@@ -135,15 +133,12 @@ function removeFromSaved(item){
                 saved.filter(s=>
                     s.id !== item.id
             ))
-            console.log(``)
         }
-        console.log(`saved after filter = ${saved[0].id}`)
         window.localStorage.setItem('saved',JSON.stringify(saved))
     };
 
     // add ingredient to sandwich
     function onAdd(ingredient){
-        console.log(ingredient)
         setSandwich(prevSandwich=>{
             return {
                 ...prevSandwich,
@@ -154,7 +149,6 @@ function removeFromSaved(item){
 
     // remove ingredient from sandwich
     function onRemove(index){
-        console.log(index)
         const newIng = [...sandwich.ingredients];
         newIng.splice(index,1)
         setSandwich(prevSandwich=>{
@@ -192,6 +186,7 @@ function removeFromSaved(item){
         setSaved(
             [...saved].concat(sandwich)
         )
+        console.log(`saved = ${saved[1]}`)
         window.localStorage.setItem("saved",JSON.stringify(saved));
         clearCurrent();
     };
