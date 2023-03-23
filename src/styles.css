@@ -52,21 +52,23 @@ td.starred:hover {
 
 @media screen and (max-width: 1320px) {
     .curSand {
-      width: 20%;
+      width: 3em;
     }
   }
 
   @media screen and (max-width: 1320px) {
     .ingredients {
-      width: 20%;
+      width: 3em;
     }
   }
+
   @media screen and (max-width: 1320px) {
     .saved {
       width: 100%;
       display: block;
     }
   }
+
   @media screen and (max-width: 1320px) {
     main {
       display: block;
