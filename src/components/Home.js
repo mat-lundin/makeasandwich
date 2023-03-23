@@ -5,12 +5,12 @@ import React, { useState } from 'react';
 import uniqid from 'uniqid';
 
 function Home(){
-const breadImg = process.env.PUBLIC_URL + "images/ingredients/bread.png";
-const condimentImg = process.env.PUBLIC_URL + "images/ingredients/condiment.png";
-const vegImg = process.env.PUBLIC_URL + "images/ingredients/lettuce.png";
-const meatImg = process.env.PUBLIC_URL + "images/ingredients/meat.png";
-const cheeseImg = process.env.PUBLIC_URL + "images/ingredients/cheese.png";
-const tomatoImg = process.env.PUBLIC_URL + "images/ingredients/tomato.png"
+const breadImg = process.env.PUBLIC_URL + "/images/ingredients/bread.png";
+const condimentImg = process.env.PUBLIC_URL + "/images/ingredients/condiment.png";
+const vegImg = process.env.PUBLIC_URL + "/images/ingredients/lettuce.png";
+const meatImg = process.env.PUBLIC_URL + "/images/ingredients/meat.png";
+const cheeseImg = process.env.PUBLIC_URL + "/images/ingredients/cheese.png";
+const tomatoImg = process.env.PUBLIC_URL + "/images/ingredients/tomato.png"
 
 const ingredients = [{
     id: 0,
