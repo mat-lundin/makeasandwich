@@ -32,4 +32,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Mat Lundin developed this application.
 
 You can access this repository [here.](https://github.com/mat-lundin/makeasandwich)
-![screenshot](.public/images/MakeASandwich.png)
+![screenshot](public/images/MakeASandwich.png)
