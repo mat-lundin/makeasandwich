@@ -124,16 +124,10 @@ const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved
     
 // remove sandwich from saved
 function removeFromSaved(item){
-    if (saved.length === 1){
-        const newSaved = [...saved]
-        newSaved.length=0
-        setSaved(()=>{return newSaved})} 
-        else {
             setSaved(
                 saved.filter(s=>
                     s.id !== item.id
             ))
-        }
     };
 
     // add ingredient to sandwich
@@ -144,6 +138,7 @@ function removeFromSaved(item){
                 ingredients: [...prevSandwich.ingredients, ingredient.id]
             }
         })
+        updateSandwichId()
     };
 
     // remove ingredient from sandwich
@@ -156,6 +151,7 @@ function removeFromSaved(item){
                 ingredients: newIng
             }
         })
+        updateSandwichId();
     };
 
     // display ingredient name on current sandwich
@@ -178,7 +174,18 @@ function removeFromSaved(item){
                 name: name
             }
         })
+        updateSandwichId();
     };
+
+    // update sandwich id on clear, save, add, or remove ing
+    function updateSandwichId(){
+        setSandwich((prevSandwich)=>{
+            return {
+                ...prevSandwich,
+                id: uniqid()
+            }
+        })
+    }
 
     // add sandwich to saved list
     function onSave(){
@@ -192,6 +199,7 @@ function removeFromSaved(item){
         function clearCurrent(){
             setSandwich((prevSandwich)=> {
                 return {...prevSandwich,
+                id: uniqid(),
                 name: 'New Sandwich',
                 ingredients: []};
             })
