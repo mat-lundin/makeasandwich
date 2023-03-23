@@ -40,6 +40,10 @@ main {
     height: 10vh;
 }
 
+#ingTable td {
+    width: 42%;
+}
+
 /* media queries */
 td.starred:hover {
     cursor: pointer;

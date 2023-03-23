@@ -2,6 +2,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table';
 
 const Ingredients = (props)=>{
 
@@ -17,14 +18,20 @@ function updateIngSearch(val){
         <div className='ingredients'>
         <h2>Ingredients</h2>
         <Form.Control type="text" id="name" placeholder='Search' onFocus={(e)=>e.target.select()} autoComplete={'off'} onChange={(e)=> updateIngSearch(e.target.value)}></Form.Control>
-        <ListGroup>
+        <Table id="ingTable" borderless={true} hover size="sm">
+            <tbody>
         {props.ingredients.map((ing, index)=>{
             if (ing.name.toLowerCase().includes(ingSearch) || ing.type.toLowerCase().includes(ingSearch))
             {return(
-                <ListGroup.Item key={index}>{ing.name} <img className='ingIcon' src={ing.icon}></img><Button onClick={()=>props.add(ing)}>Add</Button></ListGroup.Item>
+            <tr key={index}>
+                <td id="ingName">{ing.name}</td>
+                <td><img className='ingIcon' src={ing.icon}></img></td>
+                <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
+            </tr>
             )}
         })}
-        </ListGroup>
+        </tbody>
+        </Table>
         </div>
     )
 }
