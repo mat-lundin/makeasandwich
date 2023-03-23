@@ -1,4 +1,4 @@
-import CurrentSandwich from '../components/CurrentSandwich';
+import CurrentSandwich from './CurrentSandwich';
 import Ingredients from './Ingredients';
 import Saved from './Saved';
 import React, { useState } from 'react';
