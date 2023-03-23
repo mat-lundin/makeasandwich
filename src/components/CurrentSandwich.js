@@ -35,10 +35,9 @@ const CurrentSandwich = (props)=> {
                 return(
                   <tr key={index}>
                     <td>{props.displayIngName(ing)}</td>
-                    <td><img className='ingIcon' src={props.displayIngIcon(ing)}></img></td>
+                    <td><img className='ingIcon' src={props.displayIngIcon(ing)} alt="ingredient icon"></img></td>
                     <td><Button onClick={()=>props.remove(index)}>Remove</Button></td>
                   </tr>
-                // <ListGroup.Item key={index}>{props.displayIngName(ing)}<img className='ingIcon' src={props.displayIngIcon(ing)}></img><Button onClick={()=>props.remove(index)}>Remove</Button></ListGroup.Item>
                 )
             })}
             </tbody>

@@ -24,7 +24,7 @@ function updateIngSearch(val){
             {return(
             <tr key={index}>
                 <td id="ingName">{ing.name}</td>
-                <td><img className='ingIcon' src={ing.icon}></img></td>
+                <td><img className='ingIcon' src={ing.icon} alt="ingredient icon"></img></td>
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
             )} else {

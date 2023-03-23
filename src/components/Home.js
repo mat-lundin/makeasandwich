@@ -140,7 +140,7 @@ const ingredients = [{
 }]
 
 // all ingredient options
-const [ingredientList,setIngredientList] = useState(ingredients.sort((a, b) => {
+const [ingredientList] = useState(ingredients.sort((a, b) => {
     const typeA = a.type.toUpperCase(); // ignore upper and lowercase
     const typeB = b.type.toUpperCase(); // ignore upper and lowercase
     if (typeA < typeB) {
