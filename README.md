@@ -8,15 +8,12 @@
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
 
 ## Installation
 N/A
 
 ## Usage
 Use the ingredients list and the sandwich name field to fully customize your sandwich. Save the sandwich and it will persist in your Saved Sandwiches section until you decide to remove it.
-
 
 ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -31,17 +28,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   [MIT License](https://opensource.org/licenses/MIT)
     
-
 ## Contributing
 Mat Lundin developed this application.
 
-## Tests
-
-
-## Questions
-
-
-
-
 You can access this repository [here.](https://github.com/mat-lundin/makeasandwich)
-![screenshot](./images/MakeASandwich.png)
+![screenshot](.public/images/MakeASandwich.png)
