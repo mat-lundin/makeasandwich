@@ -1,7 +1,7 @@
 import CurrentSandwich from '../components/CurrentSandwich';
 import Ingredients from './Ingredients';
 import Saved from './Saved';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import uniqid from 'uniqid';
 
 function Home(){
@@ -134,7 +134,6 @@ function removeFromSaved(item){
                     s.id !== item.id
             ))
         }
-        window.localStorage.setItem('saved',JSON.stringify(saved))
     };
 
     // add ingredient to sandwich
@@ -186,8 +185,6 @@ function removeFromSaved(item){
         setSaved(
             [...saved].concat(sandwich)
         )
-        console.log(`saved = ${saved[1]}`)
-        window.localStorage.setItem("saved",JSON.stringify(saved));
         clearCurrent();
     };
 

@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
 const Saved = (props) => {
-   
-        
-
+// update local storage whenever the component renders
+useEffect(()=>{
+    window.localStorage.setItem('saved',JSON.stringify(props.saved))
+}, [props.saved]
+)
 
     // toggle whether the sandwich is starred
     function toggleStar(index){
@@ -17,7 +19,6 @@ const Saved = (props) => {
         props.setSaved(()=>{
             return newSaved;
         });
-        window.localStorage.setItem('saved',JSON.stringify(props.saved));
     }
 
     // load saved sandwich to current sandwich
