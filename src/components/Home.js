@@ -12,9 +12,7 @@ const meatImg = process.env.PUBLIC_URL + "images/ingredients/meat.png";
 const cheeseImg = process.env.PUBLIC_URL + "images/ingredients/cheese.png";
 const tomatoImg = process.env.PUBLIC_URL + "images/ingredients/tomato.png"
 
-
-// all ingredient options
-const [ingredientList,setIngredientList] = useState( [{
+const ingredients = [{
     id: 0,
     name: 'white bread',
     type: 'bread',
@@ -109,7 +107,52 @@ const [ingredientList,setIngredientList] = useState( [{
     name: 'pumpernickel',
     type: 'bread',
     icon: breadImg
-}]);
+},
+{
+    id:15,
+    name: 'turkey',
+    type: 'meat',
+    icon: meatImg
+},
+{
+    id:16,
+    name: 'chicken',
+    type: 'meat',
+    icon: meatImg
+},
+{
+    id:17,
+    name: 'roast beef',
+    type: 'meat',
+    icon: meatImg
+},
+{
+    id:18,
+    name: 'rye',
+    type: 'bread',
+    icon: breadImg
+},
+{
+    id:19,
+    name: 'multigrain',
+    type: 'bread',
+    icon: breadImg
+}]
+
+// all ingredient options
+const [ingredientList,setIngredientList] = useState(ingredients.sort((a, b) => {
+    const typeA = a.type.toUpperCase(); // ignore upper and lowercase
+    const typeB = b.type.toUpperCase(); // ignore upper and lowercase
+    if (typeA < typeB) {
+      return -1;
+    }
+    if (typeA > typeB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  }));
 
 // set current sandwich
 const [sandwich, setSandwich] = useState({
