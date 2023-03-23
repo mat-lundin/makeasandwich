@@ -31,7 +31,7 @@ useEffect(()=>{
     return (
         <main className='saved'>
             <h2>Saved Sandwiches</h2>
-            <Table striped bordered hover className='savedTable'>
+            <Table striped borderless hover className='savedTable'>
                 <thead>
                     <tr>
                         <th>Name</th>
