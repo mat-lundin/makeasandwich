@@ -1,4 +1,3 @@
-import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
@@ -28,7 +27,9 @@ function updateIngSearch(val){
                 <td><img className='ingIcon' src={ing.icon}></img></td>
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
-            )}
+            )} else {
+                return null
+            }
         })}
         </tbody>
         </Table>
