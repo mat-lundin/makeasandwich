@@ -27,8 +27,12 @@ main {
     padding-left: 2%;
 }
 
+.saveclearbtns {
+  width: 50%;
+}
+
 #clearbtn {
-  margin-top: 10%;
+  margin-top: 14%;
 }
 
 .saved {
@@ -76,7 +80,7 @@ td.starred:hover {
 
   @media screen and (max-width: 1320px) {
     #clearbtn {
-      margin-top: 25%;
+      margin-top: 20%;
     }
   }
 
