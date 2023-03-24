@@ -3,6 +3,15 @@ h3 {
     justify-content: center;
 }
 
+.navbar {
+  width: 50%;
+}
+
+.navbar img {
+  height: 3em;
+  justify-content: left;
+}
+
 main {
     display: inline-flex;
 }
