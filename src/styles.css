@@ -62,14 +62,14 @@ td.starred:hover {
     background-color: lightblue;
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1257px) {
   main {
     
     padding-left: 2%;
   }
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1257px) {
     .cursand {
       width: 3em;
       padding-left: 0%;
@@ -78,32 +78,32 @@ td.starred:hover {
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     #clearbtn {
       margin-top: 20%;
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     #name {
       width: 17em;
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     .ingredients {
       width: 3em;
       padding-left: 0%;
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     #ingSearch {
       width: 17em;
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     .saved {
       width: 100%;
       display: block;
@@ -111,7 +111,7 @@ td.starred:hover {
     }
   }
 
-  @media screen and (max-width: 1320px) {
+  @media screen and (max-width: 1257px) {
     main {
       display: block;
     }
