@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/makeasandwich/static/css/main.11d76ac6.css",
-    "main.js": "/makeasandwich/static/js/main.1cac7e0b.js",
+    "main.css": "/makeasandwich/static/css/main.eed25106.css",
+    "main.js": "/makeasandwich/static/js/main.e85edbdb.js",
     "static/js/787.88945d14.chunk.js": "/makeasandwich/static/js/787.88945d14.chunk.js",
+    "static/media/BreveSc-a1zR.ttf": "/makeasandwich/static/media/BreveSc-a1zR.e415b4d2184bc7e16882.ttf",
     "index.html": "/makeasandwich/index.html",
-    "main.11d76ac6.css.map": "/makeasandwich/static/css/main.11d76ac6.css.map",
-    "main.1cac7e0b.js.map": "/makeasandwich/static/js/main.1cac7e0b.js.map",
+    "main.eed25106.css.map": "/makeasandwich/static/css/main.eed25106.css.map",
+    "main.e85edbdb.js.map": "/makeasandwich/static/js/main.e85edbdb.js.map",
     "787.88945d14.chunk.js.map": "/makeasandwich/static/js/787.88945d14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.11d76ac6.css",
-    "static/js/main.1cac7e0b.js"
+    "static/css/main.eed25106.css",
+    "static/js/main.e85edbdb.js"
   ]
 }
