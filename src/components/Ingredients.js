@@ -16,7 +16,7 @@ function updateIngSearch(val){
     return(
         <div className='ingredients'>
         <h2>Ingredients</h2>
-        <Form.Control type="text" id="name" placeholder='Search' onFocus={(e)=>e.target.select()} autoComplete={'off'} onChange={(e)=> updateIngSearch(e.target.value)}></Form.Control>
+        <Form.Control type="text" id="ingSearch" placeholder='Search' onFocus={(e)=>e.target.select()} autoComplete={'off'} onChange={(e)=> updateIngSearch(e.target.value)}></Form.Control>
         <Table id="ingTable" borderless={true} hover size="sm">
             <tbody>
         {props.ingredients.map((ing, index)=>{

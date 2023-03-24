@@ -10,7 +10,7 @@ const CurrentSandwich = (props)=> {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div className='curSand'>
+        <div className='cursand'>
             <h2>Current Sandwich</h2>
         <Form onSubmit={(event)=>{
             event.preventDefault();
