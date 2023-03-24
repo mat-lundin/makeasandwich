@@ -27,6 +27,10 @@ main {
     padding-left: 2%;
 }
 
+#clearbtn {
+  margin-top: 10%;
+}
+
 .saved {
     display: block;
     padding-right: 2%;
@@ -67,6 +71,12 @@ td.starred:hover {
       padding-left: 0%;
       padding-bottom: 2%;
       display: block;
+    }
+  }
+
+  @media screen and (max-width: 1320px) {
+    #clearbtn {
+      margin-top: 25%;
     }
   }
 

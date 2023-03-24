@@ -28,8 +28,7 @@ const CurrentSandwich = (props)=> {
           </Button>
         </Modal.Footer>
       </Modal>
-        {/* <ListGroup> */}
-        <Table id="ingTable" borderless={true} hover size="sm">
+        <Table id="ingTable" borderless hover size="sm">
           <tbody>
             {props.sandwich.ingredients.map((ing,index)=>{
                 return(
@@ -42,9 +41,12 @@ const CurrentSandwich = (props)=> {
             })}
             </tbody>
             </Table>
-        {/* </ListGroup> */}
-        <Button variant="success" size='lg' onClick={props.sandwich.ingredients.length<1? handleShow : props.save}>Save</Button>
-        <Button variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}
+            <Table borderless>
+              <tbody>
+        <td><Button variant="success" size='lg' onClick={props.sandwich.ingredients.length<1? handleShow : props.save}>Save</Button></td>
+        <td><Button id='clearbtn' variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}</td>
+        </tbody>
+        </Table>
         </div>
     )
 }
