@@ -1,6 +1,45 @@
+@font-face {
+  font-family: 'deliFont';
+  src: local('deliFont'), url(./fonts/BreveSc-a1zR.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'headerfont';
+  src: url(./fonts/WagnerModern-OJE8.ttf) format('truetype');
+}
+
+body {
+  /* font-family: deliFont; */
+  font-weight: bolder;
+}
+
 h3 {
     padding-bottom: 2em;
     justify-content: center;
+}
+
+.navbar {
+  /* width: 55%; */
+  font-family: delifont;
+  /* background-color: gray; */
+  /* background-image: linear-gradient(to right, brown, red, red, orange, orange, lightgray,white, white); */
+  /* background-image: url(/images/tablecloth.jpeg); */
+  background-position: 33%;
+}
+
+.navbar img {
+  height: 4em;
+  justify-content: left;
+  border-radius: 50%;
+}
+
+.navbar h1 {
+  margin-right: 10vh;
+  font-size: 4em;
+  background-image: linear-gradient(to right, white, white, white, lightpink, pink, white, white, white);
+  padding-right: .1em;
+  padding-left: .1em;
+  border-radius: 3px;
 }
 
 main {
