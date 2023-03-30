@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function Header(){
     return (
-        <Navbar expand="lg" variant="light" bg="light">
+        <Navbar expand="lg" variant="light">
       <Container>
         <Navbar.Brand><img src={process.env.PUBLIC_URL+'/images/sandwich.png'}></img></Navbar.Brand>
         <Nav>

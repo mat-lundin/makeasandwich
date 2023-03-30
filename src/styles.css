@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: deliFont;
+  /* font-family: deliFont; */
   font-weight: bolder;
 }
 
@@ -20,13 +20,15 @@ h3 {
 
 .navbar {
   width: 50%;
-  /* font-family: headerfont; */
-  background-color: gray;
+  font-family: delifont;
+  /* background-color: gray; */
+  background-image: linear-gradient(to right, red, red, orange, orange, lightgray, lightgray, lightgray,  white);
 }
 
 .navbar img {
   height: 3em;
   justify-content: left;
+  border-radius: 50%;
 }
 
 main {
