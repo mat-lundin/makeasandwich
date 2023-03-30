@@ -19,16 +19,24 @@ h3 {
 }
 
 .navbar {
-  width: 50%;
+  /* width: 55%; */
   font-family: delifont;
   /* background-color: gray; */
-  background-image: linear-gradient(to right, red, red, orange, orange, lightgray, lightgray, lightgray,  white);
+  /* background-image: linear-gradient(to right, brown, red, red, orange, orange, lightgray,white, white); */
+  /* background-image: url(/images/tablecloth.jpeg); */
+  background-position: 33%;
+  
 }
 
 .navbar img {
-  height: 3em;
+  height: 4em;
   justify-content: left;
   border-radius: 50%;
+}
+
+.navbar h1 {
+  font-size: 4em;
+  font-weight: 400;
 }
 
 main {
