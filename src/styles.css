@@ -25,7 +25,6 @@ h3 {
   /* background-image: linear-gradient(to right, brown, red, red, orange, orange, lightgray,white, white); */
   /* background-image: url(/images/tablecloth.jpeg); */
   background-position: 33%;
-  
 }
 
 .navbar img {
@@ -35,8 +34,12 @@ h3 {
 }
 
 .navbar h1 {
+  margin-right: 10vh;
   font-size: 4em;
-  font-weight: 400;
+  background-image: linear-gradient(to right, white, white, white, lightpink, pink, white, white, white);
+  padding-right: .1em;
+  padding-left: .1em;
+  border-radius: 3px;
 }
 
 main {
