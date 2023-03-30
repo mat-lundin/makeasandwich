@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'deliFont';
-  src: local('deliFont'), url(./fonts/BreveSc-a1zR.ttf) format('ttf');
+  src: local('deliFont'), url(./fonts/BreveSc-a1zR.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'headerfont';
+  src: url(./fonts/WagnerModern-OJE8.ttf) format('truetype');
 }
 
 body {
@@ -15,6 +20,8 @@ h3 {
 
 .navbar {
   width: 50%;
+  /* font-family: headerfont; */
+  background-color: gray;
 }
 
 .navbar img {
