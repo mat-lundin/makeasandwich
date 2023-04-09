@@ -46,12 +46,23 @@ main {
     display: inline-flex;
 }
 
+.container-fluid {
+  max-height: 100vh;
+}
+
 .ingredients {
     /* background-color: blue; */
-    width: 50%;
+    /* height: 50vh; */
     place-content: right;
     padding-right: 2%;
     padding-left: 2%;
+    overflow-y: scroll;
+}
+
+#ingTable {
+  /* height: 10%; */
+  /* overflow-y: auto; */
+  
 }
 
 .ingIcon {
