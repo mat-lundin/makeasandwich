@@ -28,7 +28,11 @@ function updateIngSearch(val){
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
             )} else {
-                return null
+                return(
+                    <tr key={index}>
+                        <td style={{display: index !== 0? 'none' : '' }}>{'No Results'}</td>
+                    </tr>
+                )
             }
         })}
         </tbody>

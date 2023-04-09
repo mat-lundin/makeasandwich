@@ -59,11 +59,6 @@ main {
     overflow-y: scroll;
 }
 
-#ingTable {
-  /* height: 10%; */
-  /* overflow-y: auto; */
-  
-}
 
 .ingIcon {
     height: 3em;
@@ -100,6 +95,11 @@ main {
 
 .starImg {
     height: 10vh;
+}
+
+#ingTable {
+    height: 10%;
+    overflow-y: auto;
 }
 
 #ingTable td {
