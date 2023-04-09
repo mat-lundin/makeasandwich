@@ -101,7 +101,7 @@ td.starred:hover {
     background-color: lightblue;
 }
 
-@media screen and (max-width: 1257px) {
+/* @media screen and (max-width: 1257px) {
   main {
     
     padding-left: 2%;
@@ -154,5 +154,5 @@ td.starred:hover {
     main {
       display: block;
     }
-  }
+  } */
 
