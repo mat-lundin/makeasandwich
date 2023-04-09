@@ -28,7 +28,7 @@ const CurrentSandwich = (props)=> {
           </Button>
         </Modal.Footer>
       </Modal>
-        <Table id="ingTable" borderless hover size="sm">
+        <Table id="curIngTable" borderless hover size="sm">
           <tbody>
             {props.sandwich.ingredients.map((ing,index)=>{
                 return(

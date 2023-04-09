@@ -46,13 +46,19 @@ main {
     display: inline-flex;
 }
 
+.container-fluid {
+  max-height: 100vh;
+}
+
 .ingredients {
     /* background-color: blue; */
-    width: 50%;
+    /* height: 50vh; */
     place-content: right;
     padding-right: 2%;
     padding-left: 2%;
+    overflow-y: scroll;
 }
+
 
 .ingIcon {
     height: 3em;
@@ -91,6 +97,11 @@ main {
     height: 10vh;
 }
 
+#ingTable {
+    height: 10%;
+    overflow-y: auto;
+}
+
 #ingTable td {
     width: 42%;
 }
@@ -101,7 +112,7 @@ td.starred:hover {
     background-color: lightblue;
 }
 
-@media screen and (max-width: 1257px) {
+/* @media screen and (max-width: 1257px) {
   main {
     
     padding-left: 2%;
@@ -154,5 +165,5 @@ td.starred:hover {
     main {
       display: block;
     }
-  }
+  } */
 
