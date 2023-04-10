@@ -52,95 +52,95 @@ function Home() {
         icon: cheeseImg
     },
     {
-        id: 5,
+        id: 6,
         name: 'ketchup',
         type: 'condiment',
         icon: condimentImg
     },
     {
-        id: 6,
+        id: 7,
         name: 'mayonnaise',
         type: 'condiment',
         icon: condimentImg
     },
     {
-        id: 7,
+        id: 8,
         name: 'olive oil',
         type: 'condiment',
         icon: condimentImg
     },
     {
-        id: 8,
+        id: 9,
         name: 'Italian dressing',
         type: 'condiment',
         icon: condimentImg
     },
     {
-        id: 9,
+        id: 10,
         name: 'pickles',
         type: 'veg',
         icon: vegImg
     },
     {
-        id: 10,
+        id: 11,
         name: 'brie',
         type: 'cheese',
         icon: cheeseImg
     },
     {
-        id: 11,
+        id: 12,
         name: 'american cheese',
         type: 'cheese',
         icon: cheeseImg
     },
     {
-        id: 12,
+        id: 13,
         name: 'balsamic vinegarette',
         type: 'condiment',
         icon: condimentImg
     },
     {
-        id: 13,
+        id: 14,
         name: 'apple',
         type: 'veg',
         icon: vegImg
     },
     {
-        id: 14,
+        id: 15,
         name: 'pumpernickel',
         type: 'bread',
         icon: breadImg
     },
     {
-        id: 15,
+        id: 16,
         name: 'turkey',
         type: 'meat',
         icon: meatImg
     },
     {
-        id: 16,
+        id: 17,
         name: 'chicken',
         type: 'meat',
         icon: meatImg
     },
     {
-        id: 17,
+        id: 18,
         name: 'roast beef',
         type: 'meat',
         icon: meatImg
     },
     {
-        id: 18,
+        id: 19,
         name: 'rye',
         type: 'bread',
         icon: breadImg
     },
     {
-        id: 19,
+        id: 20,
         name: 'multigrain',
         type: 'bread',
         icon: breadImg
-    }]
+    }];
 
     // all ingredient options
     const [ingredientList] = useState(ingredients.sort((a, b) => {
