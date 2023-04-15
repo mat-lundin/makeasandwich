@@ -165,10 +165,8 @@ function Home() {
         starred: false
     });
 
-    // set saved
-    // const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')) || [])
-
-    const [saved, setSaved] = useState(window.localStorage.getItem('saved') && window.localStorage.getItem('saved') !=='undefined'? JSON.parse(window.localStorage.getItem('saved')) : [])
+    // set saved sandwiches from local storage if exists
+    const [saved, setSaved] = useState(window.localStorage.getItem('saved') && window.localStorage.getItem('saved') !== 'undefined' ? JSON.parse(window.localStorage.getItem('saved')) : [])
 
     // remove sandwich from saved
     function removeFromSaved(item) {
