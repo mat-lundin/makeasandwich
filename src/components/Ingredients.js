@@ -27,13 +27,7 @@ function updateIngSearch(val){
                 <td><img className='ingIcon' src={ing.icon} alt="ingredient icon"></img></td>
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
-            )} else {
-                return(
-                    <tr key={index}>
-                        <td style={{display: index !== 0? 'none' : '' }}>{'No Results'}</td>
-                    </tr>
-                )
-            }
+            )}
         })}
         </tbody>
         </Table>
