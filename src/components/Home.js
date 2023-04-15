@@ -166,7 +166,9 @@ function Home() {
     });
 
     // set saved
-    const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')) || [])
+    // const [saved, setSaved] = useState(JSON.parse(window.localStorage.getItem('saved')) || [])
+
+    const [saved, setSaved] = useState(window.localStorage.getItem('saved') && window.localStorage.getItem('saved') !=='undefined'? JSON.parse(window.localStorage.getItem('saved')) : [])
 
     // remove sandwich from saved
     function removeFromSaved(item) {
