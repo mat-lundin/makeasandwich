@@ -43,8 +43,10 @@ const CurrentSandwich = (props)=> {
             </Table>
             <Table className="saveclearbtns" borderless size="sm">
               <tbody>
+                <tr>
         <td><Button variant="success" size='lg' onClick={props.sandwich.ingredients.length<1? handleShow : props.save}>Save</Button></td>
         <td><Button id='clearbtn' variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}</td>
+        </tr>
         </tbody>
         </Table>
         </div>
