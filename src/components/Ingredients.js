@@ -12,10 +12,12 @@ const initSearchedIng = props.ingredients;
 
 // state of current ingredients based on search term
 const [searchedIng, setSearchedIng] = useState(initSearchedIng);
+console.log(`searchedIng = ${typeof(searchedIng[0].name)}`)
 
 // update searchedIng state based on name and type matches
 useEffect(()=>{
     const oldSearchedIng = [...searchedIng];
+    console.log(`oldSearchedIng = ${oldSearchedIng[0].name}`)
     setSearchedIng( oldSearchedIng.map((ing, index)=>{
         const name = ing.name.toLowerCase();
         const type = ing.type.toLowerCase();
