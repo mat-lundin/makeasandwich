@@ -42,12 +42,18 @@ h3 h2 {
   border-radius: 3px;
 }
 
-main {
+/* main {
     display: inline-flex;
+} */
+
+.container-fluid .row {
+  width: 100vw;
 }
 
-.container-fluid {
-  max-height: 100vh;
+
+
+#ingCol {
+  height: 10em;
 }
 
 .ingredients {
@@ -83,6 +89,7 @@ main {
 .saved {
     display: block;
     padding-right: 2%;
+    width: 10em;
 }
 
 .savedIng {
@@ -90,16 +97,17 @@ main {
 }
 
 .savedTable {
-    display: inline;
+    display: block;
+    width: 30px;
 }
 
 .starImg {
     height: 10vh;
 }
 
-.ingredients #ingTable1 tbody{
-    /* height: 10vh; */
-    overflow-y: scroll;
+#ingTable1{
+    height: 10px;
+    /* overflow-y: scroll; */
 }
 
 #ingTable td {
