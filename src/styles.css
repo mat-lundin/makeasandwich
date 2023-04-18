@@ -13,7 +13,7 @@ body {
   font-weight: bolder;
 }
 
-h3 {
+h3 h2 {
     padding-bottom: 2em;
     justify-content: center;
 }
@@ -52,11 +52,11 @@ main {
 
 .ingredients {
     /* background-color: blue; */
-    /* height: 50vh; */
+    height: 10vh;
     place-content: right;
     padding-right: 2%;
     padding-left: 2%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 
@@ -68,7 +68,7 @@ main {
 
 .cursand {
     width: 36em;
-    display: inline;
+    /* display: inline; */
     padding-left: 2%;
 }
 
@@ -97,9 +97,9 @@ main {
     height: 10vh;
 }
 
-#ingTable {
-    height: 10%;
-    overflow-y: auto;
+.ingredients #ingTable1 tbody{
+    /* height: 10vh; */
+    overflow-y: scroll;
 }
 
 #ingTable td {
