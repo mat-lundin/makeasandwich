@@ -3,17 +3,16 @@
 ## Description
   This application allows the user to create, save, and edit sandwiches that they like. The list of ingredients is searchable by name or type, so get inspired!
 
+  [Check it out here!](https://mat-lundin.github.io/makeasandwich/)
+
 ## Table of Contents
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
 
-## Installation
-N/A
 
 ## Usage
-Use the ingredients list and the sandwich name field to fully customize your sandwich. Save the sandwich and it will persist in your Saved Sandwiches section until you decide to remove it.
+Use the ingredients list and the sandwich name field to fully customize your sandwich. Save the sandwich and it will persist in your Saved Sandwiches section until you decide to remove it. [Try it out!](https://mat-lundin.github.io/makeasandwich/)
 
 ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
