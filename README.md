@@ -1,9 +1,10 @@
+![header](public/images/readme/header.png)
 # Make A Sandwich
 
 ## Description
   This application allows the user to create, save, and edit sandwiches that they like. The list of ingredients is searchable by name or type, so get inspired!
 
-  [Check it out here!](https://mat-lundin.github.io/makeasandwich/)
+  [<img src="./public/images/sandwich.png" width="50" style="border-radius:27px">Check it out!](https://mat-lundin.github.io/makeasandwich/)
 
 ## Table of Contents
 - [Usage](#usage)
@@ -12,7 +13,9 @@
 
 
 ## Usage
-Use the ingredients list and the sandwich name field to fully customize your sandwich. Save the sandwich and it will persist in your Saved Sandwiches section until you decide to remove it. [Try it out!](https://mat-lundin.github.io/makeasandwich/)
+Use the ingredients list and the sandwich name field to fully customize your sandwich. Save the sandwich and it will persist in your Saved Sandwiches section until you decide to remove it. Your favorite saved sandwiches can be starred! Want to change or add an ingredient to a saved sandwich? Simply use the Load button and your sandwich will be brought back into the editor!
+
+[<img src="./public/images/sandwich.png" width="50" style="border-radius:27px">Try it!](https://mat-lundin.github.io/makeasandwich/)
 
 ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -30,5 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contributing
 Mat Lundin developed this application.
 
-You can access this repository [here.](https://github.com/mat-lundin/makeasandwich)
-![screenshot](public/images/MakeASandwich.png)
+This site is hosted [here.](https://mat-lundin.github.io/makeasandwich/)
+
+You can access the repository [here.](https://github.com/mat-lundin/makeasandwich)
+ [<img src="./public/images/MakeASandwich.png" style="on-hover">](https://mat-lundin.github.io/makeasandwich/)
