@@ -18,8 +18,11 @@ Use the ingredients list and the sandwich name field to fully customize your san
 [<img src="./public/images/sandwich.png" width="50" style="border-radius:27px">Try it!](https://mat-lundin.github.io/makeasandwich/)
 
 ## License
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 <details>
-<summary>View License</summary>
+<summary>
+    View License Details
+  </summary>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
