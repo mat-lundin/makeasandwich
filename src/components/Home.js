@@ -253,18 +253,22 @@ function Home() {
         })
     };
 
-    function onReplaceSaved(){
-        const oldSavedNames = [...saved].map((obj)=>{
-return obj.name
+    // replace sandwich of same name
+    function onReplaceSaved() {
+        const oldSavedNames = [...saved].map((obj) => {
+            return obj.name
         });
-        console.log(oldSavedNames)
-        console.log(`sandwich name = ${sandwich.name}`)
-        const replaceIndex =  oldSavedNames.indexOf(sandwich.name)
-        console.log(`replace index = ${replaceIndex}`)
+        const replaceIndex = oldSavedNames.indexOf(sandwich.name)
         setSaved(
-            [...saved].splice(replaceIndex,1,sandwich)
+            [...saved].map((obj, index) => {
+                if (index === replaceIndex) {
+                    return sandwich
+                } else {
+                    return obj
+                }
+            })
         )
-        console.log(`saved = ${saved[0].ingredients}`)
+        clearCurrent()
     }
 
     return (

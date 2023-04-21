@@ -19,7 +19,7 @@ const CurrentSandwich = (props)=> {
 
     // if same name as previously saved, prompt user to replace or pick a different name
     function handleSave(){
-      const savedNames = props.saved.map((sandwich,index)=>{
+      const savedNames = props.saved.map((sandwich)=>{
         return sandwich.name;
       });
       if (props.sandwich.ingredients.length<1){
@@ -30,6 +30,12 @@ const CurrentSandwich = (props)=> {
         props.save();
       }
     };
+
+    function handleReplace(){
+      props.replaceSaved();
+      handleCloseSameName();
+      props.clearCurrent();
+    }
 
     return (
         <div className='cursand'>
@@ -56,7 +62,7 @@ const CurrentSandwich = (props)=> {
         </Modal.Header>
         <Modal.Body>You already have a sandwich with that name!</Modal.Body>
         <Modal.Footer>
-          <Button variant='warning' onClick={props.replaceSaved}>
+          <Button variant='warning' onClick={handleReplace}>
             Replace
             </Button>
           <Button variant="secondary" onClick={handleCloseSameName}>
