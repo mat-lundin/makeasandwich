@@ -251,6 +251,17 @@ function Home() {
                 ingredients: []
             };
         })
+    };
+
+    function onReplaceSaved(){
+        console.log(`saved name = ${saved[0].name}`)
+        const replaceIndex = ()=>{
+         saved.findIndex((savedSand)=> savedSand.name === sandwich.name)
+        }
+        console.log(`replace index = ${replaceIndex}`)
+        setSaved(
+            [...saved].splice(replaceIndex,1,sandwich)
+        )
     }
 
     return (
@@ -267,6 +278,7 @@ function Home() {
                         updateName={updateName}
                         save={onSave}
                         saved={saved}
+                        replaceSaved={onReplaceSaved}
                     />
                 </Col>
                 <Col>

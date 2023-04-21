@@ -29,7 +29,8 @@ const CurrentSandwich = (props)=> {
       } else {
         props.save();
       }
-    }
+    };
+
     return (
         <div className='cursand'>
             <h2>Current Sandwich</h2>
@@ -55,7 +56,7 @@ const CurrentSandwich = (props)=> {
         </Modal.Header>
         <Modal.Body>You already have a sandwich with that name!</Modal.Body>
         <Modal.Footer>
-          <Button variant='warning'>
+          <Button variant='warning' onClick={props.replaceSaved}>
             Replace
             </Button>
           <Button variant="secondary" onClick={handleCloseSameName}>
