@@ -266,6 +266,7 @@ function Home() {
                         remove={onRemove}
                         updateName={updateName}
                         save={onSave}
+                        saved={saved}
                     />
                 </Col>
                 <Col>

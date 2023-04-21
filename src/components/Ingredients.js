@@ -28,6 +28,11 @@ function updateIngSearch(val){
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
             )}
+            else{
+                return(
+                    <tr>No Saves</tr>
+                )
+            }
         })}
         </tbody>
         </Table>
