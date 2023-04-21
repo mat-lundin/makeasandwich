@@ -251,6 +251,24 @@ function Home() {
                 ingredients: []
             };
         })
+    };
+
+    // replace sandwich of same name
+    function onReplaceSaved() {
+        const oldSavedNames = [...saved].map((obj) => {
+            return obj.name
+        });
+        const replaceIndex = oldSavedNames.indexOf(sandwich.name)
+        setSaved(
+            [...saved].map((obj, index) => {
+                if (index === replaceIndex) {
+                    return sandwich
+                } else {
+                    return obj
+                }
+            })
+        )
+        clearCurrent()
     }
 
     return (
@@ -266,6 +284,8 @@ function Home() {
                         remove={onRemove}
                         updateName={updateName}
                         save={onSave}
+                        saved={saved}
+                        replaceSaved={onReplaceSaved}
                     />
                 </Col>
                 <Col>

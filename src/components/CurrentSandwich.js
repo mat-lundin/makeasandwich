@@ -5,10 +5,38 @@ import Table from 'react-bootstrap/Table';
 import { useState } from 'react';
 
 const CurrentSandwich = (props)=> {
-    const [show, setShow] = useState(false);
+  // state for displaying modal for no ingredients added upon save
+    const [showNoIng, setShowNoIng] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleCloseNoIng = () => setShowNoIng(false);
+    const handleShowNoIng = () => setShowNoIng(true);
+
+    // state for display modal on same name on save
+    const [showSameName, setShowSameName] = useState(false);
+
+    const handleCloseSameName = () => setShowSameName(false);
+    const handleShowSameName = () => setShowSameName(true);
+
+    // if same name as previously saved, prompt user to replace or pick a different name
+    function handleSave(){
+      const savedNames = props.saved.map((sandwich)=>{
+        return sandwich.name;
+      });
+      if (props.sandwich.ingredients.length<1){
+        handleShowNoIng();
+      } else if (savedNames.includes(props.sandwich.name)){
+        handleShowSameName();
+      } else {
+        props.save();
+      }
+    };
+
+    function handleReplace(){
+      props.replaceSaved();
+      handleCloseSameName();
+      props.clearCurrent();
+    }
+
     return (
         <div className='cursand'>
             <h2>Current Sandwich</h2>
@@ -17,14 +45,28 @@ const CurrentSandwich = (props)=> {
           }}>
             <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onContextMenu={(e)=> e.preventDefault()} autoComplete={'off'} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={showNoIng} onHide={handleCloseNoIng}>
         <Modal.Header closeButton>
           <Modal.Title>Oops!</Modal.Title>
         </Modal.Header>
         <Modal.Body>Add some ingredients in order to save your sandwich!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleCloseNoIng}>
             Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal show={showSameName} onHide={handleCloseSameName}>
+        <Modal.Header closeButton>
+          <Modal.Title>Hold the mayo!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>You already have a sandwich with the name {props.sandwich.name}. <br></br>Replace this sandwich?</Modal.Body>
+        <Modal.Footer>
+          <Button variant='warning' onClick={handleReplace}>
+            Replace
+            </Button>
+          <Button variant="secondary" onClick={handleCloseSameName}>
+            Cancel
           </Button>
         </Modal.Footer>
       </Modal>
@@ -43,8 +85,10 @@ const CurrentSandwich = (props)=> {
             </Table>
             <Table className="saveclearbtns" borderless size="sm">
               <tbody>
-        <td><Button variant="success" size='lg' onClick={props.sandwich.ingredients.length<1? handleShow : props.save}>Save</Button></td>
+                <tr>
+        <td><Button variant="success" size='lg' onClick={()=>handleSave()}>Save</Button></td>
         <td><Button id='clearbtn' variant="danger" size='sm' onClick={()=>props.clearCurrent()}>Clear</Button>{' '}</td>
+        </tr>
         </tbody>
         </Table>
         </div>
