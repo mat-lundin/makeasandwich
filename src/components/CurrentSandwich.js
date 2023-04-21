@@ -55,8 +55,11 @@ const CurrentSandwich = (props)=> {
         </Modal.Header>
         <Modal.Body>You already have a sandwich with that name!</Modal.Body>
         <Modal.Footer>
+          <Button variant='warning'>
+            Replace
+            </Button>
           <Button variant="secondary" onClick={handleCloseSameName}>
-            Close
+            Cancel
           </Button>
         </Modal.Footer>
       </Modal>
