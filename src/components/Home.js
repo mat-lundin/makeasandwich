@@ -254,17 +254,17 @@ function Home() {
     };
 
     function onReplaceSaved(){
-        console.log(`saved name = ${saved[0].name}`)
-        const oldSaved = [...saved];
-        const isDupName = (element)=>element.name === sandwich.name;
-        const replaceIndex = function(){
-          oldSaved.findIndex((element)=>isDupName(element))
-        }
-        console.log(`type of replaceIndex = ${typeof(replaceIndex)}`)
+        const oldSavedNames = [...saved].map((obj)=>{
+return obj.name
+        });
+        console.log(oldSavedNames)
+        console.log(`sandwich name = ${sandwich.name}`)
+        const replaceIndex =  oldSavedNames.indexOf(sandwich.name)
         console.log(`replace index = ${replaceIndex}`)
         setSaved(
             [...saved].splice(replaceIndex,1,sandwich)
         )
+        console.log(`saved = ${saved[0].ingredients}`)
     }
 
     return (
