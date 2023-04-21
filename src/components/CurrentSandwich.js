@@ -17,6 +17,12 @@ const CurrentSandwich = (props)=> {
     const handleCloseSameName = () => setShowSameName(false);
     const handleShowSameName = () => setShowSameName(true);
 
+    // state for displaying modal for are you sure after clicking replace
+    const [showSure, setShowSure] = useState(false);
+
+    const handleCloseSure = () => setShowSure(false);
+    const handleShowSure = () => setShowSure(true);
+
     // if same name as previously saved, prompt user to replace or pick a different name
     function handleSave(){
       const savedNames = props.saved.map((sandwich)=>{
@@ -66,6 +72,20 @@ const CurrentSandwich = (props)=> {
             Replace
             </Button>
           <Button variant="secondary" onClick={handleCloseSameName}>
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal show={showSure} onHide={handleCloseSure}>
+        <Modal.Header closeButton>
+          <Modal.Title>Are you sure?</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Replace the existing sandwich named {props.sandwich.name}?</Modal.Body>
+        <Modal.Footer>
+          <Button variant='success' onClick={handleReplace}>
+            Replace
+            </Button>
+          <Button variant="secondary" onClick={handleCloseSure}>
             Cancel
           </Button>
         </Modal.Footer>
