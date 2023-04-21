@@ -37,9 +37,14 @@ const CurrentSandwich = (props)=> {
       }
     };
 
+    function clickReplace(){
+      handleShowSure();
+      handleCloseSameName()
+    }
+
     function handleReplace(){
       props.replaceSaved();
-      handleCloseSameName();
+      handleCloseSure();
       props.clearCurrent();
     }
 
@@ -68,7 +73,7 @@ const CurrentSandwich = (props)=> {
         </Modal.Header>
         <Modal.Body>You already have a sandwich with the name {props.sandwich.name}. <br></br>Replace this sandwich?</Modal.Body>
         <Modal.Footer>
-          <Button variant='warning' onClick={handleReplace}>
+          <Button variant='warning' onClick={clickReplace}>
             Replace
             </Button>
           <Button variant="secondary" onClick={handleCloseSameName}>
