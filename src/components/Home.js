@@ -255,9 +255,12 @@ function Home() {
 
     function onReplaceSaved(){
         console.log(`saved name = ${saved[0].name}`)
-        const replaceIndex = ()=>{
-         saved.findIndex((savedSand)=> savedSand.name === sandwich.name)
+        const oldSaved = [...saved];
+        const isDupName = (element)=>element.name === sandwich.name;
+        const replaceIndex = function(){
+          oldSaved.findIndex((element)=>isDupName(element))
         }
+        console.log(`type of replaceIndex = ${typeof(replaceIndex)}`)
         console.log(`replace index = ${replaceIndex}`)
         setSaved(
             [...saved].splice(replaceIndex,1,sandwich)
