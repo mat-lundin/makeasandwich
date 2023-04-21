@@ -58,9 +58,9 @@ const CurrentSandwich = (props)=> {
       </Modal>
       <Modal show={showSameName} onHide={handleCloseSameName}>
         <Modal.Header closeButton>
-          <Modal.Title>Duplicate Sammie</Modal.Title>
+          <Modal.Title>Hold the mayo!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>You already have a sandwich with that name!</Modal.Body>
+        <Modal.Body>You already have a sandwich with the name {props.sandwich.name}. <br></br>Replace this sandwich?</Modal.Body>
         <Modal.Footer>
           <Button variant='warning' onClick={handleReplace}>
             Replace
