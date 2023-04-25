@@ -274,7 +274,7 @@ function Home() {
     return (
         <Container fluid>
             <Row>
-                <Col>
+                <Col sm={1}>
                     <CurrentSandwich
                         sandwich={sandwich}
                         setSandwich={setSandwich}
