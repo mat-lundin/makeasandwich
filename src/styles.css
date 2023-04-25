@@ -112,6 +112,18 @@ td.starred:hover {
     background-color: lightblue;
 }
 
+@media screen and (max-width: 550px) {
+  .savedIng img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .saved th{
+    width: 1vw;
+  }
+}
+
 /* @media screen and (max-width: 1257px) {
   main {
     

@@ -288,14 +288,14 @@ function Home() {
                         replaceSaved={onReplaceSaved}
                     />
                 </Col>
-                <Col>
+                <Col sm={1}>
                     <Ingredients
                         ingredients={ingredientList}
                         sandwich={sandwich}
                         add={onAdd}
                     />
                 </Col>
-                <Col>
+                <Col sm={3}>
                     <Saved
                         saved={saved}
                         setSaved={setSaved}
