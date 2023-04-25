@@ -251,12 +251,30 @@ function Home() {
                 ingredients: []
             };
         })
+    };
+
+    // replace sandwich of same name
+    function onReplaceSaved() {
+        const oldSavedNames = [...saved].map((obj) => {
+            return obj.name
+        });
+        const replaceIndex = oldSavedNames.indexOf(sandwich.name)
+        setSaved(
+            [...saved].map((obj, index) => {
+                if (index === replaceIndex) {
+                    return sandwich
+                } else {
+                    return obj
+                }
+            })
+        )
+        clearCurrent()
     }
 
     return (
         <Container fluid>
             <Row>
-                <Col sm="12" md="6" lg="4">
+                <Col sm={1}>
                     <CurrentSandwich
                         sandwich={sandwich}
                         setSandwich={setSandwich}
@@ -266,6 +284,8 @@ function Home() {
                         remove={onRemove}
                         updateName={updateName}
                         save={onSave}
+                        saved={saved}
+                        replaceSaved={onReplaceSaved}
                     />
                 </Col>
                 <Col id="ingCol" sm="12" md="6" lg="4">

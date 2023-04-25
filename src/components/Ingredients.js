@@ -28,6 +28,7 @@ function updateIngSearch(val){
                 <td><Button onClick={()=>props.add(ing)}>Add</Button></td>
             </tr>
             )}
+      return null
         })}
         </tbody>
         </Table>
