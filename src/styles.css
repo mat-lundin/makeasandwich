@@ -124,6 +124,13 @@ td.starred:hover {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .modal {
+    width: 90vw;
+    position:relative;
+  }
+}
+
 /* @media screen and (max-width: 1257px) {
   main {
     
