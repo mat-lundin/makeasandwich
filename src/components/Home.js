@@ -274,7 +274,7 @@ function Home() {
     return (
         <Container fluid>
             <Row>
-                <Col sm={1}>
+                <Col sm={1} md={4} lg={4}>
                     <CurrentSandwich
                         sandwich={sandwich}
                         setSandwich={setSandwich}
@@ -288,14 +288,14 @@ function Home() {
                         replaceSaved={onReplaceSaved}
                     />
                 </Col>
-                <Col sm={1}>
+                <Col sm={1} md={4} lg={4}>
                     <Ingredients
                         ingredients={ingredientList}
                         sandwich={sandwich}
                         add={onAdd}
                     />
                 </Col>
-                <Col sm={3}>
+                <Col sm={3} md={4} lg={4}>
                     <Saved
                         saved={saved}
                         setSaved={setSaved}
