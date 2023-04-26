@@ -1,6 +1,9 @@
 import React, {useEffect} from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Saved = (props) => {
 // update local storage whenever the component renders
@@ -31,12 +34,15 @@ useEffect(()=>{
     return (
         <main className='saved'>
             <h2>Saved Sandwiches</h2>
+            <Container>
+                <Row>
+                <Col sm={.5}>
             <Table striped borderless hover className='savedTable'>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Ingredients</th>
-                        <th>Favorite</th>
+                        <th>Ing</th>
+                        <th>Fav</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -47,13 +53,15 @@ useEffect(()=>{
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)} alt="ingredient icon"></img></div>)})}</td>
                         <td className='starred' onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' alt="star for favorite" src={process.env.PUBLIC_URL+'/images/ingredients/star.png'}></img>}</td>
-                        <td><Button variant='info' onClick={()=>loadSandwich(item)}>Load</Button></td>
-                        <td><Button variant='danger' onClick={()=>props.removeFromSaved(item)}>Remove</Button></td>
+                        <td><Button variant='info' onClick={()=>loadSandwich(item)}>Load</Button><Button id='removeBtn' variant='danger' onClick={()=>props.removeFromSaved(item)}>Remove</Button></td>
                     </tr>)
 })}
                 </tbody>
 
             </Table>
+            </Col>
+            </Row>
+            </Container>
         </main>
     )
 }

@@ -97,6 +97,10 @@ main {
     height: 10vh;
 }
 
+.saved #removeBtn {
+  margin-top: 2vh;
+}
+
 #ingTable {
     height: 10%;
     overflow-y: auto;
@@ -110,6 +114,25 @@ main {
 td.starred:hover {
     cursor: pointer;
     background-color: lightblue;
+}
+
+@media screen and (max-width: 550px) {
+  .savedIng img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .saved th{
+    width: 1vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal {
+    width: 90vw;
+    position:relative;
+  }
 }
 
 /* @media screen and (max-width: 1257px) {
