@@ -97,6 +97,10 @@ main {
     height: 10vh;
 }
 
+.saved #removeBtn {
+  margin-top: 2vh;
+}
+
 #ingTable {
     height: 10%;
     overflow-y: auto;
