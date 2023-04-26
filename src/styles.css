@@ -9,7 +9,6 @@
 }
 
 body {
-  /* font-family: deliFont; */
   font-weight: bolder;
 }
 
@@ -19,11 +18,7 @@ h3 {
 }
 
 .navbar {
-  /* width: 55%; */
   font-family: delifont;
-  /* background-color: gray; */
-  /* background-image: linear-gradient(to right, brown, red, red, orange, orange, lightgray,white, white); */
-  /* background-image: url(/images/tablecloth.jpeg); */
   background-position: 33%;
 }
 
@@ -134,59 +129,3 @@ td.starred:hover {
     position:relative;
   }
 }
-
-/* @media screen and (max-width: 1257px) {
-  main {
-    
-    padding-left: 2%;
-  }
-}
-
-@media screen and (max-width: 1257px) {
-    .cursand {
-      width: 3em;
-      padding-left: 0%;
-      padding-bottom: 2%;
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    #clearbtn {
-      margin-top: 20%;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    #name {
-      width: 17em;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    .ingredients {
-      width: 3em;
-      padding-left: 0%;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    #ingSearch {
-      width: 17em;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    .saved {
-      width: 100%;
-      display: block;
-      padding-left: 0%;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    main {
-      display: block;
-    }
-  } */
-
