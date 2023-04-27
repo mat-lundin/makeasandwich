@@ -53,7 +53,7 @@ useEffect(()=>{
                         <td>{item.name}</td>
                         <td>{item.ingredients.map((id, index)=>{return(<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)} alt="ingredient icon"></img></div>)})}</td>
                         <td className='starred' onClick={()=>toggleStar(index)}>{item.starred && <img className='starImg' alt="star for favorite" src={process.env.PUBLIC_URL+'/images/ingredients/star.png'}></img>}</td>
-                        <td><Button variant='info' onClick={()=>loadSandwich(item)}>Load</Button><Button id='removeBtn' variant='danger' onClick={()=>props.removeFromSaved(item)}>Remove</Button></td>
+                        <td><Button variant='info' onClick={()=>loadSandwich(item)} href='#'>Load</Button><Button id='removeBtn' variant='danger' onClick={()=>props.removeFromSaved(item)}>Remove</Button></td>
                     </tr>)
 })}
                 </tbody>
