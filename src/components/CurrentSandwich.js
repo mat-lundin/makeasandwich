@@ -56,8 +56,9 @@ const CurrentSandwich = (props)=> {
           }}>
             <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onContextMenu={(e)=> e.preventDefault()} autoComplete={'off'} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
+        {/* modal for no ingredients added */}
         <Modal show={showNoIng} onHide={handleCloseNoIng}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Oops!</Modal.Title>
         </Modal.Header>
         <Modal.Body>Add some ingredients in order to save your sandwich!</Modal.Body>
@@ -67,8 +68,9 @@ const CurrentSandwich = (props)=> {
           </Button>
         </Modal.Footer>
       </Modal>
+      {/* modal for saving a sandwich with a name that is already saved */}
       <Modal show={showSameName} onHide={handleCloseSameName}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Hold the mayo!</Modal.Title>
         </Modal.Header>
         <Modal.Body>You already have a sandwich with the name {props.sandwich.name}. <br></br>Replace this sandwich?</Modal.Body>
@@ -80,9 +82,10 @@ const CurrentSandwich = (props)=> {
             Cancel
           </Button>
         </Modal.Footer>
+        {/* modal for are you sure you want to replace the existing saved sandwich */}
       </Modal>
       <Modal show={showSure} onHide={handleCloseSure}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Are you sure?</Modal.Title>
         </Modal.Header>
         <Modal.Body>Replace the existing sandwich named {props.sandwich.name}?</Modal.Body>
