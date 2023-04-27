@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/makeasandwich/static/css/main.91661137.css",
-    "main.js": "/makeasandwich/static/js/main.8cc12390.js",
+    "main.js": "/makeasandwich/static/js/main.0e001c58.js",
     "static/js/787.88945d14.chunk.js": "/makeasandwich/static/js/787.88945d14.chunk.js",
     "static/media/BreveSc-a1zR.ttf": "/makeasandwich/static/media/BreveSc-a1zR.e415b4d2184bc7e16882.ttf",
     "static/media/WagnerModern-OJE8.ttf": "/makeasandwich/static/media/WagnerModern-OJE8.6ac1a69d2e3599af5e7f.ttf",
     "index.html": "/makeasandwich/index.html",
     "main.91661137.css.map": "/makeasandwich/static/css/main.91661137.css.map",
-    "main.8cc12390.js.map": "/makeasandwich/static/js/main.8cc12390.js.map",
+    "main.0e001c58.js.map": "/makeasandwich/static/js/main.0e001c58.js.map",
     "787.88945d14.chunk.js.map": "/makeasandwich/static/js/787.88945d14.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91661137.css",
-    "static/js/main.8cc12390.js"
+    "static/js/main.0e001c58.js"
   ]
 }
