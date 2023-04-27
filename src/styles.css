@@ -13,8 +13,8 @@ body {
 }
 
 h3 {
-    padding-bottom: 2em;
-    justify-content: center;
+  padding-bottom: 2em;
+  justify-content: center;
 }
 
 .navbar {
@@ -38,7 +38,7 @@ h3 {
 }
 
 main {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .container-fluid {
@@ -46,25 +46,25 @@ main {
 }
 
 .ingredients {
-    /* background-color: blue; */
-    /* height: 50vh; */
-    place-content: right;
-    padding-right: 2%;
-    padding-left: 2%;
-    overflow-y: scroll;
+  /* background-color: blue; */
+  /* height: 50vh; */
+  place-content: right;
+  padding-right: 2%;
+  padding-left: 2%;
+  overflow-y: scroll;
 }
 
 
 .ingIcon {
-    height: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
+  height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .cursand {
-    width: 36em;
-    display: inline;
-    padding-left: 2%;
+  width: 36em;
+  display: inline;
+  padding-left: 2%;
 }
 
 .saveclearbtns {
@@ -76,20 +76,20 @@ main {
 }
 
 .saved {
-    display: block;
-    padding-right: 2%;
+  display: block;
+  padding-right: 2%;
 }
 
 .savedIng {
-    display: inline;
+  display: inline;
 }
 
 .savedTable {
-    display: inline;
+  display: inline;
 }
 
 .starImg {
-    height: 10vh;
+  height: 10vh;
 }
 
 .saved #removeBtn {
@@ -97,18 +97,18 @@ main {
 }
 
 #ingTable {
-    height: 10%;
-    overflow-y: auto;
+  height: 10%;
+  overflow-y: auto;
 }
 
 #ingTable td {
-    width: 42%;
+  width: 42%;
 }
 
 /* media queries */
 td.starred:hover {
-    cursor: pointer;
-    background-color: lightblue;
+  cursor: pointer;
+  background-color: lightblue;
 }
 
 @media screen and (max-width: 550px) {
@@ -118,7 +118,7 @@ td.starred:hover {
 }
 
 @media screen and (max-width: 550px) {
-  .saved th{
+  .saved th {
     width: 1vw;
   }
 }
@@ -126,6 +126,6 @@ td.starred:hover {
 @media screen and (max-width: 550px) {
   .modal {
     width: 90vw;
-    position:relative;
+    position: relative;
   }
 }
