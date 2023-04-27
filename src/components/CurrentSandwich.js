@@ -57,7 +57,9 @@ const CurrentSandwich = (props)=> {
             <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e)=>e.target.select()} onContextMenu={(e)=> e.preventDefault()} autoComplete={'off'} onChange={(e)=> props.updateName(e.target.value)}></Form.Control>
         </Form>
         <Modal show={showNoIng} onHide={handleCloseNoIng}>
-        <Modal.Header closeButton>
+        <Modal.Header style={{ 
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/images/red-and-white-gingham-tablecloth-seamless-pattern-vector-18513990.jpeg'})`, backgroundSize: '35%' 
+        }}>
           <Modal.Title>Oops!</Modal.Title>
         </Modal.Header>
         <Modal.Body>Add some ingredients in order to save your sandwich!</Modal.Body>
