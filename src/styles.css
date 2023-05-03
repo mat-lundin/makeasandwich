@@ -98,9 +98,19 @@ main {
   margin-top: 2vh;
 }
 
-#ingTable {
-  height: 10%;
-  overflow-y: auto;
+.ingredients {
+  height: 95vh;
+}
+
+.ingredients .header {
+  position: absolute;
+  
+}
+
+.ingredientTable {
+  /* height: 30vh; */
+  padding-top: 10em;
+  overflow: scroll;
 }
 
 #ingTable td {

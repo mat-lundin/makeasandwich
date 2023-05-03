@@ -15,8 +15,11 @@ const Ingredients = (props) => {
 
     return (
         <div className='ingredients'>
+            <div className='header'>
             <h2>Ingredients</h2>
             <Form.Control type="text" id="ingSearch" placeholder='Search' onFocus={(e) => e.target.select()} autoComplete={'off'} onChange={(e) => updateIngSearch(e.target.value)}></Form.Control>
+            </div>
+            <div className='ingredientTable'>
             <Table id="ingTable" borderless hover size="sm">
                 <tbody>
                     {props.ingredients.map((ing, index) => {
@@ -33,6 +36,7 @@ const Ingredients = (props) => {
                     })}
                 </tbody>
             </Table>
+            </div>
         </div>
     )
 }
