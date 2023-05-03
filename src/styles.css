@@ -9,21 +9,16 @@
 }
 
 body {
-  /* font-family: deliFont; */
   font-weight: bolder;
 }
 
-h3 h2 {
-    padding-bottom: 2em;
-    justify-content: center;
+h3 {
+  padding-bottom: 2em;
+  justify-content: center;
 }
 
 .navbar {
-  /* width: 55%; */
   font-family: delifont;
-  /* background-color: gray; */
-  /* background-image: linear-gradient(to right, brown, red, red, orange, orange, lightgray,white, white); */
-  /* background-image: url(/images/tablecloth.jpeg); */
   background-position: 33%;
 }
 
@@ -42,12 +37,17 @@ h3 h2 {
   border-radius: 3px;
 }
 
+<<<<<<< HEAD
 /* main {
     display: inline-flex;
 } */
 
 .container-fluid .row {
   width: 100vw;
+=======
+main {
+  display: inline-flex;
+>>>>>>> main
 }
 
 
@@ -57,25 +57,40 @@ h3 h2 {
 }
 
 .ingredients {
+<<<<<<< HEAD
     /* background-color: blue; */
     height: 10vh;
     place-content: right;
     padding-right: 2%;
     padding-left: 2%;
     /* overflow-y: scroll; */
+=======
+  /* background-color: blue; */
+  /* height: 50vh; */
+  place-content: right;
+  padding-right: 2%;
+  padding-left: 2%;
+  overflow-y: scroll;
+>>>>>>> main
 }
 
 
 .ingIcon {
-    height: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
+  height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .cursand {
+<<<<<<< HEAD
     width: 36em;
     /* display: inline; */
     padding-left: 2%;
+=======
+  width: 36em;
+  display: inline;
+  padding-left: 2%;
+>>>>>>> main
 }
 
 .saveclearbtns {
@@ -87,91 +102,56 @@ h3 h2 {
 }
 
 .saved {
-    display: block;
-    padding-right: 2%;
-    width: 10em;
+  display: block;
+  padding-right: 2%;
 }
 
 .savedIng {
-    display: inline;
+  display: inline;
 }
 
 .savedTable {
-    display: block;
-    width: 30px;
+  display: inline;
 }
 
 .starImg {
-    height: 10vh;
+  height: 10vh;
 }
 
-#ingTable1{
-    height: 10px;
-    /* overflow-y: scroll; */
+.saved #removeBtn {
+  margin-top: 2vh;
+}
+
+#ingTable {
+  height: 10%;
+  overflow-y: auto;
 }
 
 #ingTable td {
-    width: 42%;
+  width: 42%;
 }
 
 /* media queries */
 td.starred:hover {
-    cursor: pointer;
-    background-color: lightblue;
+  cursor: pointer;
+  background-color: lightblue;
 }
 
-/* @media screen and (max-width: 1257px) {
-  main {
-    
-    padding-left: 2%;
+@media screen and (max-width: 550px) {
+  .savedIng img {
+    display: none;
   }
 }
 
-@media screen and (max-width: 1257px) {
-    .cursand {
-      width: 3em;
-      padding-left: 0%;
-      padding-bottom: 2%;
-      display: block;
-    }
+@media screen and (max-width: 550px) {
+  .saved th {
+    width: 1vw;
   }
+}
 
-  @media screen and (max-width: 1257px) {
-    #clearbtn {
-      margin-top: 20%;
-    }
+@media screen and (max-width: 550px) {
+  .modal {
+    width: 90vw;
+    position: relative;
   }
-
-  @media screen and (max-width: 1257px) {
-    #name {
-      width: 17em;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    .ingredients {
-      width: 3em;
-      padding-left: 0%;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    #ingSearch {
-      width: 17em;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    .saved {
-      width: 100%;
-      display: block;
-      padding-left: 0%;
-    }
-  }
-
-  @media screen and (max-width: 1257px) {
-    main {
-      display: block;
-    }
-  } */
-
+}
