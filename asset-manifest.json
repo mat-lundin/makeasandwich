@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/makeasandwich/static/css/main.853688ca.css",
-    "main.js": "/makeasandwich/static/js/main.743625af.js",
+    "main.css": "/makeasandwich/static/css/main.fc310c85.css",
+    "main.js": "/makeasandwich/static/js/main.a7a63c0d.js",
     "static/js/787.88945d14.chunk.js": "/makeasandwich/static/js/787.88945d14.chunk.js",
     "static/media/BreveSc-a1zR.ttf": "/makeasandwich/static/media/BreveSc-a1zR.e415b4d2184bc7e16882.ttf",
     "static/media/WagnerModern-OJE8.ttf": "/makeasandwich/static/media/WagnerModern-OJE8.6ac1a69d2e3599af5e7f.ttf",
     "index.html": "/makeasandwich/index.html",
-    "main.853688ca.css.map": "/makeasandwich/static/css/main.853688ca.css.map",
-    "main.743625af.js.map": "/makeasandwich/static/js/main.743625af.js.map",
+    "main.fc310c85.css.map": "/makeasandwich/static/css/main.fc310c85.css.map",
+    "main.a7a63c0d.js.map": "/makeasandwich/static/js/main.a7a63c0d.js.map",
     "787.88945d14.chunk.js.map": "/makeasandwich/static/js/787.88945d14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.853688ca.css",
-    "static/js/main.743625af.js"
+    "static/css/main.fc310c85.css",
+    "static/js/main.a7a63c0d.js"
   ]
 }
