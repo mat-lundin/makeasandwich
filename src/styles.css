@@ -17,6 +17,10 @@ h3 {
   justify-content: center;
 }
 
+.container-fluid {
+  background-color: white;
+}
+
 .navbar {
   font-family: delifont;
   background-position: 33%;
@@ -100,17 +104,20 @@ main {
 
 .ingredients {
   height: 95vh;
+  width: 90%;
 }
 
 .ingredients .header {
   position: absolute;
-  
+  width: 90%;
+  background-color: white;
 }
 
 .ingredientTable {
   /* height: 30vh; */
-  padding-top: 10em;
+  padding-top: 20vh;
   overflow: scroll;
+  background-color: white;
 }
 
 #ingTable td {
