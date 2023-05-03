@@ -32,12 +32,15 @@ const Saved = (props) => {
     }
 
     return (
-        <main className='saved'>
+        <div className='saved'>
+            <div className='header'>
             <h2>Saved Sandwiches</h2>
+            </div>
             <Container>
                 <Row>
                     <Col sm={.5}>
-                        <Table striped borderless hover className='savedTable'>
+                        <div className='savedTable'>
+                        <Table striped borderless hover>
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -59,10 +62,12 @@ const Saved = (props) => {
                             </tbody>
 
                         </Table>
+                        </div>
                     </Col>
                 </Row>
             </Container>
-        </main>
+            
+        </div>
     )
 }
 
