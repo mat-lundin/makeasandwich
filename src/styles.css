@@ -50,8 +50,8 @@ main {
 }
 
 .ingredients {
-  /* background-color: blue; */
-  /* height: 50vh; */
+  height: 95vh;
+  width: 90%;
   place-content: right;
   padding-right: 2%;
   padding-left: 2%;
@@ -79,16 +79,16 @@ main {
 }
 
 .saved {
-  /* display: block; */
   padding-right: 2%;
-  height: 75vh;
+  max-height: 95vh;
+  max-width: 85vw;
+  overflow-y: scroll;
 }
 
 .savedTable {
-  padding-top: 20vh;
+  padding-top: 10vh;
   overflow: scroll;
   background-color: white;
-  /* display: inline; */
 }
 
 .savedIng {
@@ -101,11 +101,6 @@ main {
 
 .saved #removeBtn {
   margin-top: 2vh;
-}
-
-.ingredients {
-  height: 95vh;
-  width: 90%;
 }
 
 .header {

@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const Saved = (props) => {
     // update local storage whenever the component renders
@@ -34,39 +31,31 @@ const Saved = (props) => {
     return (
         <div className='saved'>
             <div className='header'>
-            <h2>Saved Sandwiches</h2>
+                <h2>Saved Sandwiches</h2>
             </div>
-            <Container>
-                <Row>
-                    <Col sm={.5}>
-                        <div className='savedTable'>
-                        <Table striped borderless hover>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Ing</th>
-                                    <th>Fav</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {props.saved.length > 0 && props.saved.map((item, index) => {
-                                    return (<tr key={index}>
-                                        <td>{item.name}</td>
-                                        <td>{item.ingredients.map((id, index) => { return (<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)} alt="ingredient icon"></img></div>) })}</td>
-                                        <td className='starred' onClick={() => toggleStar(index)}>{item.starred && <img className='starImg' alt="star for favorite" src={process.env.PUBLIC_URL + '/images/ingredients/star.png'}></img>}</td>
-                                        <td><Button variant='info' onClick={() => loadSandwich(item)} href='#'>Load</Button><Button id='removeBtn' variant='danger' onClick={() => props.removeFromSaved(item)}>Remove</Button></td>
-                                    </tr>)
-                                })}
-                            </tbody>
-
-                        </Table>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-            
+            <div className='savedTable'>
+                <Table striped borderless hover>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Ing</th>
+                            <th>Fav</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {props.saved.length > 0 && props.saved.map((item, index) => {
+                            return (<tr key={index}>
+                                <td>{item.name}</td>
+                                <td>{item.ingredients.map((id, index) => { return (<div className='savedIng' key={index}> {props.displayIngName(id)}<img className='ingIcon' src={props.displayIngIcon(id)} alt="ingredient icon"></img></div>) })}</td>
+                                <td className='starred' onClick={() => toggleStar(index)}>{item.starred && <img className='starImg' alt="star for favorite" src={process.env.PUBLIC_URL + '/images/ingredients/star.png'}></img>}</td>
+                                <td><Button variant='info' onClick={() => loadSandwich(item)} href='#'>Load</Button><Button id='removeBtn' variant='danger' onClick={() => props.removeFromSaved(item)}>Remove</Button></td>
+                            </tr>)
+                        })}
+                    </tbody>
+                </Table>
+            </div>
         </div>
     )
 }
