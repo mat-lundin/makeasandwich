@@ -50,8 +50,8 @@ main {
 }
 
 .ingredients {
-  /* background-color: blue; */
-  /* height: 50vh; */
+  height: 95vh;
+  width: 90%;
   place-content: right;
   padding-right: 2%;
   padding-left: 2%;
@@ -79,15 +79,19 @@ main {
 }
 
 .saved {
-  display: block;
   padding-right: 2%;
-}
-
-.savedIng {
-  display: inline;
+  max-height: 95vh;
+  max-width: 85vw;
+  overflow-y: scroll;
 }
 
 .savedTable {
+  padding-top: 10vh;
+  overflow: scroll;
+  background-color: white;
+}
+
+.savedIng {
   display: inline;
 }
 
@@ -99,12 +103,7 @@ main {
   margin-top: 2vh;
 }
 
-.ingredients {
-  height: 95vh;
-  width: 90%;
-}
-
-.ingredients .header {
+.header {
   position: absolute;
   width: 90%;
   background-color: white;
