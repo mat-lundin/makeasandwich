@@ -17,6 +17,12 @@ const CurrentSandwich = (props) => {
   const handleCloseSameName = () => setShowSameName(false);
   const handleShowSameName = () => setShowSameName(true);
 
+  // state for display modal on same ingredients on save
+  const [showSameIng, setShowSameIng] = useState(false);
+
+  const handleCloseSameIng = () => setShowSameName(false);
+  const handleShowSameIng = () => setShowSameName(true);
+
   // state for displaying modal for are you sure after clicking replace
   const [showSure, setShowSure] = useState(false);
 
@@ -28,11 +34,24 @@ const CurrentSandwich = (props) => {
     const savedNames = props.saved.map((sandwich) => {
       return sandwich.name;
     });
+    const savedIngList = props.saved.map((sandwich) => {
+      return sandwich.ingredients;
+    });
+    console.log(`savedIngList= ${savedIngList}`)
+
+    console.log(`saved ing [0][0] = ${savedIngList[0][0]}`)
+    console.log(`curSand ingredient [0] = ${props.sandwich.ingredients[0]}`)
+
     if (props.sandwich.ingredients.length < 1) {
       handleShowNoIng();
     } else if (savedNames.includes(props.sandwich.name)) {
       handleShowSameName();
-    } else {
+    }
+    else if (savedIngList.includes(props.sandwich.ingredients)) {
+      console.log(`hitting same ingredients`)
+      handleShowSameIng();
+    }
+    else {
       props.save();
     }
   };
@@ -82,8 +101,22 @@ const CurrentSandwich = (props) => {
             Cancel
           </Button>
         </Modal.Footer>
-        {/* modal for are you sure you want to replace the existing saved sandwich */}
       </Modal>
+      <Modal show={showSameIng} onHide={handleCloseSameIng}>
+        <Modal.Header>
+          <Modal.Title>Hold the mustard!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>You already have a sandwich with these ingredients. <br></br>Replace this sandwich?</Modal.Body>
+        <Modal.Footer>
+          <Button variant='warning' onClick={clickReplace}>
+            Replace
+          </Button>
+          <Button variant="secondary" onClick={handleCloseSameName}>
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {/* modal for are you sure you want to replace the existing saved sandwich */}
       <Modal show={showSure} onHide={handleCloseSure}>
         <Modal.Header>
           <Modal.Title>Are you sure?</Modal.Title>
