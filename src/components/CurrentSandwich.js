@@ -37,10 +37,6 @@ const CurrentSandwich = (props) => {
     const savedIngList = props.saved.map((sandwich) => {
       return sandwich.ingredients;
     });
-    console.log(`savedIngList= ${savedIngList}`)
-
-    console.log(`saved ing [0][0] = ${savedIngList[0][0]}`)
-    console.log(`curSand ingredient [0] = ${props.sandwich.ingredients[0]}`)
 
     if (props.sandwich.ingredients.length < 1) {
       handleShowNoIng();

@@ -27,7 +27,7 @@ const Ingredients = (props) => {
                                 return (
                                     <tr key={index}>
                                         <td id="ingName">{ing.name}</td>
-                                        <td><img className='ingIcon' src={ing.icon} alt="ingredient icon"></img></td>
+                                        <td><img className='ingIcon' src={props.displayIngIcon(ing.id)} alt="ingredient icon"></img></td>
                                         <td><Button onClick={() => props.add(ing)}>Add</Button></td>
                                     </tr>
                                 )

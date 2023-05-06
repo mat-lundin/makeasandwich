@@ -7,17 +7,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import uniqid from 'uniqid';
 import ingredients from '../ingredients/ingredients.json';
+import ingImgs from '../ingredients/images.json';
 
 function Home() {
-    const breadImg = process.env.PUBLIC_URL + "/images/ingredients/bread.png";
-    const condimentImg = process.env.PUBLIC_URL + "/images/ingredients/condiment.png";
-    const vegImg = process.env.PUBLIC_URL + "/images/ingredients/lettuce.png";
-    const meatImg = process.env.PUBLIC_URL + "/images/ingredients/meat.png";
-    const cheeseImg = process.env.PUBLIC_URL + "/images/ingredients/cheese.png";
-    const tomatoImg = process.env.PUBLIC_URL + "/images/ingredients/tomato.png"
-
-    
-
     // all ingredient options
     const [ingredientList] = useState(ingredients.sort((a, b) => {
         const typeA = a.type.toUpperCase(); // ignore upper and lowercase
@@ -84,8 +76,12 @@ function Home() {
 
     // display ingredient icon on current sandwich
     function displayIngIcon(id) {
-        return ingredientList.find(obj => obj.id === id).icon;
-
+        const curIng = ingredientList.find(obj => obj.id === id);
+        if (curIng.name === 'tomato'){
+            return `${process.env.PUBLIC_URL}${ingImgs.find(obj => obj.type === 'tomato').img}`;
+        } else {
+            return `${process.env.PUBLIC_URL}${ingImgs.find(obj => obj.type === curIng.type).img}`
+        }
     }
 
     // update the name of the current sandwich
@@ -167,6 +163,7 @@ function Home() {
                 <Col sm={1} md={4} lg={4}>
                     <Ingredients
                         ingredients={ingredientList}
+                        displayIngIcon={displayIngIcon}
                         sandwich={sandwich}
                         add={onAdd}
                     />
