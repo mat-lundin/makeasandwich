@@ -10,7 +10,7 @@ import ingredients from '../ingredients/ingredients.json';
 import ingImgs from '../ingredients/images.json';
 
 function Home() {
-    // all ingredient options
+    // all ingredient options sorted alphabetically
     const [ingredientList] = useState(ingredients.sort((a, b) => {
         const typeA = a.type.toUpperCase(); // ignore upper and lowercase
         const typeB = b.type.toUpperCase(); // ignore upper and lowercase
