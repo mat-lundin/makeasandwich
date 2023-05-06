@@ -1,0 +1,26 @@
+[
+    {
+        "type": "bread",
+        "img": "/images/ingredients/bread.png"
+    },
+    {
+        "type": "veg",
+        "img": "/images/ingredients/lettuce.png"
+    },
+    {
+        "type": "condiment",
+        "img": "/images/ingredients/condiment.png"
+    },
+    {
+        "type": "meat",
+        "img": "/images/ingredients/meat.png"
+    },
+    {
+        "type": "cheese",
+        "img": "/images/ingredients/cheese.png"
+    },
+    {
+        "type": "tomato",
+        "img": "/images/ingredients/tomato.png"
+    }
+]

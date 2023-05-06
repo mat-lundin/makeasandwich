@@ -1,0 +1,147 @@
+[{
+    "id": 0,
+    "name": "white bread",
+    "type": "bread",
+    "typeAlias": ["gluten"],
+    "icon": "breadImg"
+},
+{
+    "id": 1,
+    "name": "lettuce",
+    "type": "veg",
+    "typeAlias": ["vegetable","veggie"],
+    "icon": "vegImg"
+},
+{
+    "id": 2,
+    "name": "tomato",
+    "type": "veg",
+    "typeAlias": ["vegetable","veggie"],
+    "icon": "tomatoImg"
+},
+{
+    "id": 3,
+    "name": "bacon",
+    "type": "meat",
+    "typeAlias": ["animal", "carne"],
+    "icon": "meatImg"
+},
+{
+    "id": 4,
+    "name": "mustard",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 5,
+    "name": "cheddar",
+    "type": "cheese",
+    "typeAlias": [],
+    "icon": "cheeseImg"
+},
+{
+    "id": 6,
+    "name": "ketchup",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 7,
+    "name": "mayonnaise",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 8,
+    "name": "olive oil",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 9,
+    "name": "Italian dressing",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 10,
+    "name": "pickles",
+    "type": "veg",
+    "typeAlias": ["vegetable","veggie"],
+    "icon": "vegImg"
+},
+{
+    "id": 11,
+    "name": "brie",
+    "type": "cheese",
+    "typeAlias": [],
+    "icon": "cheeseImg"
+},
+{
+    "id": 12,
+    "name": "american cheese",
+    "type": "cheese",
+    "typeAlias": [],
+    "icon": "cheeseImg"
+},
+{
+    "id": 13,
+    "name": "balsamic vinegarette",
+    "type": "condiment",
+    "typeAlias": [],
+    "icon": "condimentImg"
+},
+{
+    "id": 14,
+    "name": "apple",
+    "type": "veg",
+    "typeAlias": ["vegetable","veggie"],
+    "icon": "vegImg"
+},
+{
+    "id": 15,
+    "name": "pumpernickel",
+    "type": "bread",
+    "typeAlias": ["gluten"],
+    "icon": "breadImg"
+},
+{
+    "id": 16,
+    "name": "turkey",
+    "type": "meat",
+    "typeAlias": ["animal", "carne"],
+    "icon": "meatImg"
+},
+{
+    "id": 17,
+    "name": "chicken",
+    "type": "meat",
+    "typeAlias": ["animal", "carne"],
+    "icon": "meatImg"
+},
+{
+    "id": 18,
+    "name": "roast beef",
+    "type": "meat",
+    "typeAlias": [],
+    "icon": "meatImg"
+},
+{
+    "id": 19,
+    "name": "rye",
+    "type": "bread",
+    "typeAlias": ["gluten"],
+    "icon": "breadImg"
+},
+{
+    "id": 20,
+    "name": "multigrain",
+    "type": "bread",
+    "typeAlias": ["gluten"],
+    "icon": "breadImg"
+}]

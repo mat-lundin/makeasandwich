@@ -23,11 +23,11 @@ const Ingredients = (props) => {
                 <Table id="ingTable" borderless hover size="sm">
                     <tbody>
                         {props.ingredients.map((ing, index) => {
-                            if (ing.name.toLowerCase().includes(ingSearch) || ing.type.toLowerCase().includes(ingSearch)) {
+                            if (ing.name.toLowerCase().includes(ingSearch) || ing.type.toLowerCase().includes(ingSearch) || ing.typeAlias.toString().includes(ingSearch)) {
                                 return (
                                     <tr key={index}>
                                         <td id="ingName">{ing.name}</td>
-                                        <td><img className='ingIcon' src={ing.icon} alt="ingredient icon"></img></td>
+                                        <td><img className='ingIcon' src={props.displayIngIcon(ing.id)} alt="ingredient icon"></img></td>
                                         <td><Button onClick={() => props.add(ing)}>Add</Button></td>
                                     </tr>
                                 )
