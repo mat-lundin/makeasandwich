@@ -20,8 +20,8 @@ const CurrentSandwich = (props) => {
   // state for display modal on same ingredients on save
   const [showSameIng, setShowSameIng] = useState(false);
 
-  const handleCloseSameIng = () => setShowSameName(false);
-  const handleShowSameIng = () => setShowSameName(true);
+  const handleCloseSameIng = () => setShowSameIng(false);
+  const handleShowSameIng = () => setShowSameIng(true);
 
   // state for displaying modal for are you sure after clicking replace
   const [showSure, setShowSure] = useState(false);
@@ -34,17 +34,18 @@ const CurrentSandwich = (props) => {
     const savedNames = props.saved.map((sandwich) => {
       return sandwich.name;
     });
-    const savedIngList = props.saved.map((sandwich) => {
-      return sandwich.ingredients;
+    const savedIng = props.saved.map((sandwich) => {
+      return {
+        id: sandwich.id,
+        ingredients: sandwich.ingredients
+      };
     });
-
     if (props.sandwich.ingredients.length < 1) {
       handleShowNoIng();
     } else if (savedNames.includes(props.sandwich.name)) {
       handleShowSameName();
     }
-    else if (savedIngList.includes(props.sandwich.ingredients)) {
-      console.log(`hitting same ingredients`)
+    else if (savedIng.findIndex(obj => obj.ingredients === props.sandwich.ingredients)) {
       handleShowSameIng();
     }
     else {
@@ -55,6 +56,7 @@ const CurrentSandwich = (props) => {
   function clickReplace() {
     handleShowSure();
     handleCloseSameName()
+    handleCloseSameIng()
   }
 
   function handleReplace() {
@@ -98,6 +100,7 @@ const CurrentSandwich = (props) => {
           </Button>
         </Modal.Footer>
       </Modal>
+      {/* modal for saving a sandwich with the same ingredients as a previously saved sandwich */}
       <Modal show={showSameIng} onHide={handleCloseSameIng}>
         <Modal.Header>
           <Modal.Title>Hold the mustard!</Modal.Title>
@@ -107,7 +110,7 @@ const CurrentSandwich = (props) => {
           <Button variant='warning' onClick={clickReplace}>
             Replace
           </Button>
-          <Button variant="secondary" onClick={handleCloseSameName}>
+          <Button variant="secondary" onClick={handleCloseSameIng}>
             Cancel
           </Button>
         </Modal.Footer>
