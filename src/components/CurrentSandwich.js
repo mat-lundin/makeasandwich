@@ -35,17 +35,28 @@ const CurrentSandwich = (props) => {
       return sandwich.name;
     });
     const savedIng = props.saved.map((sandwich) => {
-      return {
-        id: sandwich.id,
-        ingredients: sandwich.ingredients
-      };
+      return sandwich.ingredients;
     });
+    const savedIngMatch = function () {
+      if (savedIng.find(el => el === props.sandwich.ingredients)){
+      return console.log(`found!`)
+    } else {
+      console.log(`not found`)
+    }};
+    console.log(`saved Ing[0] is array? ${Array.isArray(savedIng[0])}`)
+    console.log(`savedIng ingredient type = ${typeof(savedIng[0][0])}`)
+    console.log(`savedIng first ing = ${(savedIng[0][0])}`)
+      
+      console.log(`sandwich Ing is array? ${Array.isArray(props.sandwich.ingredients)}`)
+      console.log(`sandwichIng = ${(props.sandwich.ingredients[0])}`)
     if (props.sandwich.ingredients.length < 1) {
       handleShowNoIng();
     } else if (savedNames.includes(props.sandwich.name)) {
       handleShowSameName();
     }
-    else if (savedIng.findIndex(obj => obj.ingredients === props.sandwich.ingredients)) {
+    // const found = arr1.some(r=> arr2.indexOf(r) >= 0)
+    else if (savedIngMatch()) {
+      
       handleShowSameIng();
     }
     else {
