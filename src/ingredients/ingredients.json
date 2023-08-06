@@ -30,7 +30,7 @@
     "id": 4,
     "name": "mustard",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
@@ -44,28 +44,28 @@
     "id": 6,
     "name": "ketchup",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
     "id": 7,
     "name": "mayonnaise",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
     "id": 8,
     "name": "olive oil",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
     "id": 9,
     "name": "Italian dressing",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
@@ -93,7 +93,7 @@
     "id": 13,
     "name": "balsamic vinegarette",
     "type": "condiment",
-    "typeAlias": [],
+    "typeAlias": ["sauce"],
     "icon": "condimentImg"
 },
 {
@@ -128,7 +128,7 @@
     "id": 18,
     "name": "roast beef",
     "type": "meat",
-    "typeAlias": [],
+    "typeAlias": ["animal", "carne"],
     "icon": "meatImg"
 },
 {
@@ -144,4 +144,25 @@
     "type": "bread",
     "typeAlias": ["gluten"],
     "icon": "breadImg"
+},
+{
+    "id": 21,
+    "name": "prosciutto",
+    "type": "meat",
+    "typeAlias": ["animal", "carne", "italian"],
+    "icon": "meatImg"
+},
+{
+    "id": 22,
+    "name": "Italian bread",
+    "type": "bread",
+    "typeAlias": ["gluten"],
+    "icon": "breadImg"
+},
+{
+    "id": 23,
+    "name": "parmesan",
+    "type": "cheese",
+    "typeAlias": ["cheese","italian"],
+    "icon": "cheeseImg"
 }]
