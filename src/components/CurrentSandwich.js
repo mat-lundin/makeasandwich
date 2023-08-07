@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import { useState } from 'react';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 const CurrentSandwich = (props) => {
   // state for displaying modal for no ingredients added upon save
@@ -69,7 +71,20 @@ const CurrentSandwich = (props) => {
       <Form onSubmit={(event) => {
         event.preventDefault();
       }}>
-        <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e) => e.target.select()} onContextMenu={(e) => e.preventDefault()} autoComplete={'off'} onChange={(e) => props.updateName(e.target.value)}></Form.Control>
+        <OverlayTrigger
+                trigger = 'hover'
+                   delay={{ hide: 100, show: 100 }}
+                   
+                   overlay={(props) => (
+                     <Tooltip {...props}>
+                       Name your sandwich!
+                     </Tooltip>
+                   )}
+                   placement="bottom"
+                 >
+                  <Form.Control type="text" id="name" value={props.sandwich.name} onFocus={(e) => e.target.select()} onContextMenu={(e) => e.preventDefault()} autoComplete={'off'} onChange={(e) => props.updateName(e.target.value)}></Form.Control>
+                 </OverlayTrigger>
+        
       </Form>
       {/* modal for no ingredients added */}
       <Modal show={showNoIng} onHide={handleCloseNoIng}>

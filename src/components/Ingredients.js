@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 const Ingredients = (props) => {
 
@@ -17,7 +19,19 @@ const Ingredients = (props) => {
         <div className='ingredients'>
             <div className='header'>
                 <h2>Ingredients</h2>
+                <OverlayTrigger
+                trigger = 'focus'
+                   delay={{ hide: 100, show: 100 }}
+                   
+                   overlay={(props) => (
+                     <Tooltip {...props}>
+                       Search ingredient names, or categories like "cheese" or "italian"
+                     </Tooltip>
+                   )}
+                   placement="bottom"
+                 >
                 <Form.Control type="text" id="ingSearch" placeholder='Search' onFocus={(e) => e.target.select()} autoComplete={'off'} onChange={(e) => updateIngSearch(e.target.value)}></Form.Control>
+                </OverlayTrigger>
             </div>
             <div className='ingredientTable'>
                 <Table id="ingTable" borderless hover size="sm">
